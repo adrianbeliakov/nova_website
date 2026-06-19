@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Pool & Spa's · Diseño y Construcción de Piscinas en el Baix Empordà</title>
+<meta name="description" content="Nova Pool & Spa's — Diseño, construcción, reparación y mantenimiento de piscinas y spas en el Baix Empordà y la Costa Brava. Presupuesto sin compromiso.">
+<meta name="theme-color" content="#052b33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C16 2 6 14 6 21a10 10 0 0 0 20 0C26 14 16 2 16 2Z' fill='%2319c0ce'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abyss:#04232a;--deep:#063743;--pool:#0e7c8b;--aqua:#19c0ce;--aqua-2:#5fe3de;
+  --foam:#e8fafa;--sun:#ffc24b;--sun-deep:#f2a93b;--ink:#06262d;--ink-soft:#3f5c62;
+  --paper:#f6fdfd;--white:#fff;--line:rgba(6,38,45,.10);
+  --shadow-soft:0 18px 50px -20px rgba(6,38,45,.35);--shadow-card:0 24px 60px -28px rgba(6,38,45,.45);
+  --display:'Sora',system-ui,sans-serif;--body:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+  --maxw:1200px;--pad:clamp(1.2rem,5vw,2.4rem);--r:18px;--ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.7;overflow-x:hidden;font-size:clamp(1rem,.4vw + .95rem,1.12rem);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.05;font-weight:800;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--aqua);color:var(--abyss)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.sec{padding-block:clamp(4.5rem,9vw,8rem);position:relative}
+.eyebrow{font-family:var(--mono);font-size:.78rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--pool);display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--aqua)}
+.eyebrow.on-dark{color:var(--aqua-2)}
+.eyebrow.center{justify-content:center}
+.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--ink-soft);max-width:60ch}
+.h-title{font-size:clamp(2rem,4.6vw,3.5rem)}
+.center{text-align:center}.muted{color:var(--ink-soft)}
+.btn{--bg:var(--ink);--fg:var(--white);display:inline-flex;align-items:center;gap:.6rem;justify-content:center;padding:.95em 1.6em;border-radius:100px;font-weight:700;font-size:.98rem;background:var(--bg);color:var(--fg);position:relative;overflow:hidden;isolation:isolate;transition:transform .4s var(--ease),box-shadow .4s var(--ease),filter .3s;will-change:transform;font-family:var(--display);letter-spacing:-.01em}
+.btn svg{width:1.05em;height:1.05em;transition:transform .4s var(--ease)}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 60%);opacity:0;transition:opacity .4s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px -14px rgba(6,38,45,.6)}
+.btn:hover::after{opacity:1}.btn:hover svg{transform:translateX(4px)}
+.btn:active{transform:translateY(-1px) scale(.99)}
+.btn-sun{--bg:linear-gradient(135deg,var(--sun),var(--sun-deep));--fg:#3a2700;box-shadow:0 14px 30px -12px rgba(242,169,59,.7)}
+.btn-aqua{--bg:linear-gradient(135deg,var(--aqua),var(--pool));--fg:#012127}
+.btn-ghost{--bg:transparent;--fg:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost.on-dark{--fg:var(--foam);border-color:rgba(232,250,250,.28)}
+.btn-ghost:hover{border-color:var(--aqua)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;background:linear-gradient(90deg,var(--aqua),var(--sun));transition:width .08s linear}
+.nav{position:fixed;top:0;left:0;width:100%;z-index:120;transition:background .5s var(--ease),box-shadow .5s var(--ease),padding .5s var(--ease),border-color .5s;padding-block:1.1rem;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(246,253,253,.82);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);box-shadow:0 10px 40px -28px rgba(6,38,45,.5);padding-block:.7rem;border-bottom-color:var(--line)}
+.nav-inner{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad);display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.65rem;flex-shrink:0}
+.brand .drop{width:34px;height:34px;flex-shrink:0;filter:drop-shadow(0 4px 8px rgba(25,192,206,.45))}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.brand-name{font-family:var(--display);font-weight:800;font-size:1.32rem;letter-spacing:-.01em;color:var(--ink);transition:color .5s}
+.brand-sub{font-family:var(--mono);font-size:.54rem;letter-spacing:.32em;text-transform:uppercase;color:var(--pool);margin-top:3px}
+.nav:not(.scrolled) .brand-name{color:var(--white)}
+.nav:not(.scrolled) .brand-sub{color:var(--aqua-2)}
+.nav:not(.scrolled) .nav-link{color:rgba(255,255,255,.86)}
+.nav:not(.scrolled) .lang-seg{border-color:rgba(255,255,255,.28)}
+.nav:not(.scrolled) .lang-seg button{color:rgba(255,255,255,.8)}
+.nav:not(.scrolled) .burger span{background:#fff}
+.nav-links{display:flex;align-items:center;gap:.3rem;list-style:none}
+.nav-link{position:relative;padding:.5rem .85rem;font-weight:600;font-size:.96rem;color:var(--ink);transition:color .3s;border-radius:10px}
+.nav-link::after{content:"";position:absolute;left:.85rem;right:.85rem;bottom:.28rem;height:2px;background:linear-gradient(90deg,var(--aqua),var(--sun));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);border-radius:2px}
+.nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
+.nav-link.active{color:var(--pool)}
+.nav:not(.scrolled) .nav-link.active{color:var(--aqua-2)}
+.nav-right{display:flex;align-items:center;gap:.9rem}
+.lang-seg{display:inline-flex;border:1.5px solid var(--line);border-radius:100px;padding:3px;gap:2px}
+.lang-seg button{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.05em;padding:.32rem .56rem;border-radius:100px;color:var(--ink-soft);transition:.3s}
+.lang-seg button.on{background:linear-gradient(135deg,var(--aqua),var(--pool));color:#042127;font-weight:700}
+.nav-cta{display:inline-flex}
+.burger{display:none;flex-direction:column;gap:5px;padding:.5rem;z-index:130}
+.burger span{width:26px;height:2.5px;background:var(--ink);border-radius:3px;transition:.4s var(--ease)}
+body.menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+body.menu-open .burger span{background:#fff!important}
+.mobile-menu{position:fixed;inset:0;z-index:115;background:linear-gradient(160deg,var(--abyss),var(--deep) 60%,var(--pool));display:flex;flex-direction:column;justify-content:center;padding:6rem var(--pad) 3rem;clip-path:circle(0% at calc(100% - 3rem) 3rem);transition:clip-path .7s var(--ease);pointer-events:none}
+body.menu-open .mobile-menu{clip-path:circle(150% at calc(100% - 3rem) 3rem);pointer-events:auto}
+.mobile-menu a.m-link{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,8vw,2.8rem);color:#fff;padding:.45rem 0;display:flex;align-items:center;gap:1rem;opacity:0;transform:translateY(28px);border-bottom:1px solid rgba(255,255,255,.1)}
+.mobile-menu a.m-link .num{font-family:var(--mono);font-size:.85rem;color:var(--aqua-2);font-weight:500}
+body.menu-open .mobile-menu a.m-link{animation:mIn .6s var(--ease) forwards}
+body.menu-open .m-link:nth-child(1){animation-delay:.18s}
+body.menu-open .m-link:nth-child(2){animation-delay:.26s}
+body.menu-open .m-link:nth-child(3){animation-delay:.34s}
+body.menu-open .m-link:nth-child(4){animation-delay:.42s}
+body.menu-open .m-link:nth-child(5){animation-delay:.5s}
+@keyframes mIn{to{opacity:1;transform:none}}
+.mobile-foot{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.2rem;opacity:0}
+body.menu-open .mobile-foot{animation:mIn .6s var(--ease) .6s forwards}
+.mobile-foot a{color:var(--foam);font-weight:600}
+.mobile-foot .lang-seg{align-self:flex-start;border-color:rgba(255,255,255,.25)}
+.mobile-foot .lang-seg button{color:rgba(255,255,255,.8)}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:radial-gradient(120% 100% at 75% -10%,#0a5563 0%,var(--deep) 38%,var(--abyss) 80%);color:var(--foam);overflow:hidden;isolation:isolate}
+.caustics{position:absolute;inset:-12%;z-index:0;opacity:.5;mix-blend-mode:screen;pointer-events:none}
+.hero-glow{position:absolute;width:70vw;height:70vw;max-width:760px;max-height:760px;border-radius:50%;background:radial-gradient(circle,rgba(25,192,206,.5),transparent 65%);top:-22%;right:-12%;z-index:0;filter:blur(20px);pointer-events:none}
+.hero-glow.two{background:radial-gradient(circle,rgba(255,194,75,.22),transparent 62%);bottom:-26%;left:-16%;top:auto;right:auto;width:55vw;height:55vw}
+#bubbles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.bubble{position:absolute;bottom:-10%;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.55),rgba(95,227,222,.08));border:1px solid rgba(255,255,255,.18);animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) translateX(0) scale(.6);opacity:0}10%{opacity:.8}90%{opacity:.5}100%{transform:translateY(-115svh) translateX(var(--drift,20px)) scale(1);opacity:0}}
+#ripples{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.ripple{position:absolute;border:1.5px solid rgba(149,232,232,.6);border-radius:50%;transform:translate(-50%,-50%) scale(0);animation:rip 1.2s var(--ease) forwards;pointer-events:none}
+@keyframes rip{to{transform:translate(-50%,-50%) scale(1);opacity:0;border-width:.5px}}
+.hero-inner{position:relative;z-index:5;width:100%;max-width:var(--maxw);margin-inline:auto;padding:7.5rem var(--pad) 5rem}
+.hero-eyebrow{font-family:var(--mono);font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua-2);display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(149,232,232,.28);padding:.5rem 1rem;border-radius:100px;background:rgba(8,60,72,.4);backdrop-filter:blur(6px);opacity:0;transform:translateY(20px);animation:up .8s var(--ease) .15s forwards}
+.hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--aqua);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(25,192,206,.5)}70%{box-shadow:0 0 0 12px rgba(25,192,206,0)}100%{box-shadow:0 0 0 0 rgba(25,192,206,0)}}
+.hero h1{font-size:clamp(2.7rem,7.4vw,6.1rem);margin:1.4rem 0;max-width:16ch;letter-spacing:-.035em}
+.hero h1 .word{display:inline-block;opacity:0;transform:translateY(40px);animation:up .9s var(--ease) forwards}
+.hl{position:relative;color:var(--aqua-2);white-space:nowrap}
+.hl svg{position:absolute;left:-2%;right:-2%;bottom:-.18em;width:104%;height:.4em;overflow:visible}
+.hl svg path{stroke:var(--sun);stroke-width:7;fill:none;stroke-linecap:round;stroke-dasharray:760;stroke-dashoffset:760;animation:draw 1.1s var(--ease) 1.1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero p.sub{font-size:clamp(1.05rem,1.8vw,1.32rem);max-width:54ch;color:rgba(232,250,250,.82);opacity:0;transform:translateY(22px);animation:up .9s var(--ease) .85s forwards}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.2rem;opacity:0;transform:translateY(22px);animation:up .9s var(--ease) 1s forwards}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.6rem;opacity:0;animation:fade 1s ease 1.3s forwards}
+.chip{display:inline-flex;align-items:center;gap:.55rem;font-size:.86rem;font-weight:600;padding:.55rem 1rem;border-radius:100px;background:rgba(8,60,72,.45);border:1px solid rgba(149,232,232,.2);color:var(--foam);backdrop-filter:blur(6px)}
+.chip svg{width:1rem;height:1rem;color:var(--aqua-2)}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+.scroll-cue{position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);z-index:5;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(232,250,250,.6);font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:0;animation:fade 1s ease 1.6s forwards}
+.scroll-cue .mouse{width:22px;height:34px;border:2px solid rgba(232,250,250,.5);border-radius:12px;position:relative}
+.scroll-cue .mouse::after{content:"";position:absolute;top:6px;left:50%;width:3px;height:6px;background:var(--aqua-2);border-radius:3px;transform:translateX(-50%);animation:wheel 1.6s infinite}
+@keyframes wheel{0%{opacity:1;top:6px}60%{opacity:0;top:16px}100%{opacity:0}}
+.wave-sep{position:absolute;bottom:-1px;left:0;width:100%;z-index:4;line-height:0}
+.wave-sep svg{width:100%;height:auto;display:block}
+.marquee{background:var(--abyss);color:var(--foam);padding:1.1rem 0;overflow:hidden;white-space:nowrap;position:relative}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--abyss),transparent)}
+.marquee::after{right:0;background:linear-gradient(270deg,var(--abyss),transparent)}
+.marquee-track{display:inline-flex;gap:2.6rem;animation:scroll-x 28s linear infinite;will-change:transform}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--display);font-weight:700;font-size:1.05rem;display:inline-flex;align-items:center;gap:2.6rem;color:rgba(232,250,250,.85)}
+.marquee-track span::after{content:"◆";color:var(--sun);font-size:.6rem}
+@keyframes scroll-x{to{transform:translateX(-50%)}}
+[data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-reveal].in{opacity:1;transform:none}
+[data-reveal="left"]{transform:translateX(-44px)}
+[data-reveal="right"]{transform:translateX(44px)}
+[data-reveal="scale"]{transform:scale(.92)}
+.sec-head{max-width:62ch;margin-bottom:clamp(2.4rem,5vw,3.6rem)}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-head h2{margin:1rem 0 1rem}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem}
+.svc-card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:2.2rem 1.9rem;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;isolation:isolate;cursor:pointer}
+.svc-card::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .5s;background:radial-gradient(120% 80% at 100% 0%,rgba(25,192,206,.12),transparent 55%)}
+.svc-card::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--aqua),var(--sun));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.svc-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-card);border-color:transparent}
+.svc-card:hover::before{opacity:1}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-ico{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;margin-bottom:1.3rem;background:linear-gradient(135deg,rgba(25,192,206,.16),rgba(14,124,139,.12));color:var(--pool);transition:transform .5s var(--ease),background .5s,color .5s}
+.svc-card:hover .svc-ico{transform:rotate(-6deg) scale(1.08);background:linear-gradient(135deg,var(--aqua),var(--pool));color:#fff}
+.svc-ico svg{width:30px;height:30px}
+.svc-num{position:absolute;top:1.5rem;right:1.6rem;font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);opacity:.5}
+.svc-card h3{font-size:1.28rem;margin-bottom:.7rem}
+.svc-card p{color:var(--ink-soft);font-size:.98rem;line-height:1.65}
+.svc-more{margin-top:1.3rem;display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:.9rem;color:var(--pool);font-family:var(--display)}
+.svc-more svg{width:1rem;height:1rem;transition:transform .4s var(--ease)}
+.svc-card:hover .svc-more svg{transform:translateX(5px)}
+.band{background:linear-gradient(160deg,var(--abyss),var(--deep) 55%,var(--pool));color:var(--foam);position:relative;overflow:hidden;isolation:isolate}
+.band .caustics{opacity:.32}
+.band-glow{position:absolute;width:50vw;height:50vw;max-width:560px;max-height:560px;border-radius:50%;background:radial-gradient(circle,rgba(25,192,206,.3),transparent 65%);bottom:-25%;right:-10%;filter:blur(10px);z-index:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.4rem;margin-top:3rem}
+.stat{text-align:center;padding:1.6rem 1rem;border-radius:var(--r);background:rgba(8,60,72,.4);border:1px solid rgba(149,232,232,.16);backdrop-filter:blur(6px);transition:transform .5s var(--ease),border-color .5s}
+.stat:hover{transform:translateY(-6px);border-color:rgba(149,232,232,.4)}
+.stat .num{font-family:var(--mono);font-weight:700;font-size:clamp(2.4rem,5.5vw,3.6rem);line-height:1;background:linear-gradient(135deg,var(--aqua-2),var(--sun));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .lbl{margin-top:.7rem;font-size:.82rem;letter-spacing:.04em;color:rgba(232,250,250,.78);text-transform:uppercase;font-weight:600}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:1rem}
+.why-item{display:flex;gap:.9rem;align-items:flex-start}
+.why-item .tick{flex-shrink:0;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--aqua),var(--pool));color:#012127}
+.why-item .tick svg{width:20px;height:20px}
+.why-item h4{font-size:1.05rem;margin-bottom:.2rem;color:#fff}
+.why-item p{font-size:.92rem;color:rgba(232,250,250,.7)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.split.rev .split-media{order:2}
+.split-media{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3.4;background:linear-gradient(150deg,var(--deep),var(--pool));box-shadow:var(--shadow-card)}
+.split-media .water-art{position:absolute;inset:0}
+.split-media .caustics{opacity:.5}
+.media-badge{position:absolute;left:1.4rem;bottom:1.4rem;z-index:3;background:rgba(255,255,255,.94);border-radius:16px;padding:1rem 1.3rem;box-shadow:var(--shadow-soft);max-width:62%}
+.media-badge .big{font-family:var(--mono);font-weight:700;font-size:1.7rem;color:var(--pool);line-height:1}
+.media-badge .small{font-size:.78rem;color:var(--ink-soft);font-weight:600;margin-top:.2rem}
+.media-float{position:absolute;top:1.3rem;right:1.3rem;z-index:3;width:74px;height:74px;border-radius:18px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);display:grid;place-items:center;color:#fff;animation:bob 4s ease-in-out infinite}
+.media-float svg{width:38px;height:38px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.split-body h2{margin:1rem 0 1.2rem}
+.split-body .lead{margin-bottom:1.6rem}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin:1.4rem 0 2rem}
+.feature-list li{display:flex;gap:.7rem;align-items:center;font-weight:600;color:var(--ink)}
+.feature-list li svg{width:22px;height:22px;color:var(--pool);flex-shrink:0}
+.tst{background:var(--foam);overflow:hidden}
+.tst-viewport{overflow:hidden;border-radius:24px}
+.tst-track{display:flex;transition:transform .7s var(--ease)}
+.tst-slide{min-width:100%;padding:.5rem}
+.tst-card{background:var(--white);border-radius:24px;padding:clamp(2rem,4vw,3.2rem);box-shadow:var(--shadow-soft);border:1px solid var(--line);position:relative}
+.tst-stars{display:flex;gap:.2rem;color:var(--sun);margin-bottom:1rem}
+.tst-stars svg{width:20px;height:20px}
+.tst-text{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2.3vw,1.6rem);line-height:1.5;letter-spacing:-.01em}
+.tst-who{display:flex;align-items:center;gap:.9rem;margin-top:1.8rem}
+.tst-av{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--aqua),var(--pool));display:grid;place-items:center;color:#012127;font-weight:800;font-family:var(--display);font-size:1.1rem;flex-shrink:0}
+.tst-who .nm{font-weight:700;font-family:var(--display)}
+.tst-who .loc{font-size:.84rem;color:var(--ink-soft)}
+.tst-nav{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:1.8rem}
+.tst-arrow{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--pool);background:var(--white);transition:.35s}
+.tst-arrow:hover{background:var(--pool);color:#fff;border-color:var(--pool);transform:scale(1.05)}
+.tst-dots{display:flex;gap:.5rem}
+.tst-dot{width:9px;height:9px;border-radius:50%;background:var(--line);transition:.35s;cursor:pointer}
+.tst-dot.on{background:var(--pool);width:26px;border-radius:6px}
+.cta-band{background:linear-gradient(135deg,var(--pool),var(--deep) 70%,var(--abyss));color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.cta-band .caustics{opacity:.4}
+.cta-inner{position:relative;z-index:3;text-align:center;max-width:46ch;margin-inline:auto}
+.cta-inner h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:1rem}
+.cta-inner p{color:rgba(232,250,250,.82);margin-bottom:2rem;font-size:1.1rem}
+.cta-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.page-hero{position:relative;background:radial-gradient(120% 120% at 80% -20%,#0a5563,var(--deep) 45%,var(--abyss));color:var(--foam);padding:9.5rem var(--pad) 5.5rem;overflow:hidden;isolation:isolate}
+.page-hero .caustics{opacity:.4}
+.page-hero-inner{position:relative;z-index:3;max-width:var(--maxw);margin-inline:auto}
+.crumbs{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;color:var(--aqua-2);text-transform:uppercase;margin-bottom:1.2rem}
+.crumbs a{opacity:.8}.crumbs a:hover{opacity:1}
+.page-hero h1{font-size:clamp(2.3rem,6vw,4.4rem);max-width:18ch;letter-spacing:-.03em}
+.page-hero p{max-width:56ch;margin-top:1.3rem;color:rgba(232,250,250,.82);font-size:clamp(1.05rem,1.7vw,1.25rem)}
+.svc-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding-block:clamp(2.5rem,5vw,4rem);border-bottom:1px solid var(--line)}
+.svc-row:last-child{border-bottom:none}
+.svc-row.rev .svc-row-media{order:2}
+.svc-row-media{border-radius:22px;overflow:hidden;aspect-ratio:5/4;position:relative;background:linear-gradient(150deg,var(--deep),var(--pool));box-shadow:var(--shadow-card)}
+.svc-row-media .big-ico{position:absolute;inset:0;display:grid;place-items:center;z-index:3;color:rgba(255,255,255,.92)}
+.svc-row-media .big-ico svg{width:38%;height:38%;filter:drop-shadow(0 8px 20px rgba(0,0,0,.3))}
+.svc-row-num{font-family:var(--mono);font-size:.85rem;color:var(--pool);font-weight:700;letter-spacing:.1em}
+.svc-row h2{font-size:clamp(1.7rem,3.5vw,2.6rem);margin:.6rem 0 1rem}
+.svc-row p{color:var(--ink-soft);margin-bottom:1.2rem}
+.svc-tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.svc-tags span{font-size:.82rem;font-weight:600;padding:.4rem .85rem;border-radius:100px;background:rgba(25,192,206,.1);color:var(--pool);border:1px solid rgba(25,192,206,.2)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.4rem;margin-top:1rem}
+.step{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:2.2rem 1.7rem;transition:transform .5s var(--ease),box-shadow .5s}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow-card)}
+.step .step-n{font-family:var(--mono);font-weight:700;font-size:1rem;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--abyss),var(--pool));color:var(--aqua-2);margin-bottom:1.2rem}
+.step h3{font-size:1.15rem;margin-bottom:.5rem}
+.step p{font-size:.94rem;color:var(--ink-soft)}
+.step-line{position:absolute;top:2.2rem;right:-1.4rem;color:var(--line);display:none}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.zone-col{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(1.8rem,3.5vw,2.6rem);position:relative;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s}
+.zone-col:hover{transform:translateY(-6px);box-shadow:var(--shadow-card)}
+.zone-col .pin{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;color:#fff;margin-bottom:1.2rem;background:linear-gradient(135deg,var(--aqua),var(--pool))}
+.zone-col .pin svg{width:28px;height:28px}
+.zone-col h3{font-size:1.5rem;margin-bottom:.4rem}
+.zone-col .sub{font-size:.86rem;color:var(--ink-soft);font-family:var(--mono);letter-spacing:.05em;margin-bottom:1.3rem}
+.town-list{display:flex;flex-wrap:wrap;gap:.55rem}
+.town-list span{font-size:.86rem;font-weight:600;padding:.45rem .85rem;border-radius:100px;background:var(--foam);border:1px solid var(--line);color:var(--ink);transition:.3s;cursor:default}
+.town-list span:hover{background:var(--aqua);color:#012127;border-color:var(--aqua)}
+.zone-note{margin-top:2.5rem;text-align:center;color:var(--ink-soft);font-size:.95rem}
+.story{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.story-text p{margin-bottom:1.2rem;color:var(--ink-soft)}
+.story-text p strong{color:var(--ink)}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.value{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;transition:.4s}
+.value:hover{transform:translateY(-5px);box-shadow:var(--shadow-soft)}
+.value .v-ico{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,rgba(25,192,206,.16),rgba(14,124,139,.1));display:grid;place-items:center;color:var(--pool);margin-bottom:.9rem}
+.value .v-ico svg{width:22px;height:22px}
+.value h4{font-size:1.05rem;margin-bottom:.3rem}
+.value p{font-size:.9rem;color:var(--ink-soft)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,3.5rem);align-items:start}
+.contact-cards{display:flex;flex-direction:column;gap:1rem}
+.c-card{display:flex;gap:1.1rem;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem 1.5rem;transition:transform .4s var(--ease),box-shadow .4s}
+.c-card:hover{transform:translateX(6px);box-shadow:var(--shadow-soft)}
+.c-card .c-ico{flex-shrink:0;width:48px;height:48px;border-radius:13px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--aqua),var(--pool))}
+.c-card .c-ico svg{width:24px;height:24px}
+.c-card .c-lbl{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.c-card .c-val{font-weight:700;font-family:var(--display);font-size:1.05rem;color:var(--ink);word-break:break-word}
+.form-wrap{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(1.8rem,4vw,2.8rem);box-shadow:var(--shadow-card)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1.1rem;position:relative}
+.field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:.45rem;font-family:var(--display)}
+.field input,.field textarea{width:100%;padding:.9rem 1rem;border:1.5px solid var(--line);border-radius:12px;font-family:var(--body);font-size:1rem;background:var(--paper);color:var(--ink);transition:.3s;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--aqua);background:#fff;box-shadow:0 0 0 4px rgba(25,192,206,.12)}
+.field textarea{min-height:130px}
+.form-msg{margin-top:1rem;padding:1rem;border-radius:12px;background:rgba(31,175,84,.12);color:#157a3a;font-weight:600;font-size:.95rem;display:none;align-items:center;gap:.6rem}
+.form-msg.show{display:flex}
+.form-note{font-size:.8rem;color:var(--ink-soft);margin-top:.9rem}
+.map-panel{margin-top:2rem;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:21/9;background:linear-gradient(150deg,var(--deep),var(--pool));box-shadow:var(--shadow-card);display:grid;place-items:center}
+.map-panel .caustics{opacity:.4}
+.map-inner{position:relative;z-index:3;text-align:center;color:#fff;padding:1.5rem}
+.map-inner .pin-big{width:60px;height:60px;margin:0 auto 1rem;border-radius:50%;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;animation:bob 4s ease-in-out infinite}
+.map-inner .pin-big svg{width:30px;height:30px}
+.map-inner h4{font-size:1.3rem;margin-bottom:.3rem}
+.map-inner p{color:rgba(232,250,250,.85);margin-bottom:1.2rem}
+.footer{background:var(--abyss);color:rgba(232,250,250,.72);padding-top:clamp(3.5rem,7vw,5.5rem);position:relative;overflow:hidden}
+.footer .caustics{opacity:.16}
+.foot-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:2.5rem}
+.foot-brand .brand-name{color:#fff;font-size:1.6rem}
+.foot-brand .brand-sub{color:var(--aqua-2)}
+.foot-about{margin-top:1.2rem;font-size:.95rem;max-width:34ch;line-height:1.7}
+.foot-social{display:flex;gap:.6rem;margin-top:1.4rem}
+.foot-social a{width:40px;height:40px;border-radius:11px;border:1px solid rgba(149,232,232,.2);display:grid;place-items:center;color:var(--foam);transition:.35s}
+.foot-social a:hover{background:var(--aqua);color:#012127;transform:translateY(-3px)}
+.foot-col h4{color:#fff;font-size:1rem;margin-bottom:1.2rem;font-family:var(--display)}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.foot-col a,.foot-col li{font-size:.93rem;transition:.3s}
+.foot-col a:hover{color:var(--aqua-2);padding-left:4px}
+.foot-contact li{display:flex;gap:.65rem;align-items:flex-start;font-size:.93rem;margin-bottom:.8rem}
+.foot-contact svg{width:18px;height:18px;color:var(--aqua-2);flex-shrink:0;margin-top:3px}
+.foot-bottom{position:relative;z-index:2;margin-top:3rem;padding:1.6rem 0;border-top:1px solid rgba(149,232,232,.12);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.84rem}
+.foot-bottom .lang-seg{border-color:rgba(149,232,232,.2)}
+.foot-bottom .lang-seg button{color:rgba(232,250,250,.7)}
+.fab-wa{position:fixed;right:1.3rem;bottom:1.3rem;z-index:110;width:58px;height:58px;border-radius:50%;background:#1faf54;display:grid;place-items:center;color:#fff;box-shadow:0 12px 30px -8px rgba(31,175,84,.7);transition:transform .4s var(--ease)}
+.fab-wa::before{content:"";position:absolute;inset:0;border-radius:50%;background:#1faf54;z-index:-1;animation:pulse-wa 2.4s infinite}
+@keyframes pulse-wa{0%{transform:scale(1);opacity:.6}70%{transform:scale(1.5);opacity:0}100%{opacity:0}}
+.fab-wa:hover{transform:scale(1.1) rotate(6deg)}
+.fab-wa svg{width:30px;height:30px}
+.to-top{position:fixed;right:1.3rem;bottom:5.6rem;z-index:109;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(14px);transition:.4s var(--ease);box-shadow:var(--shadow-soft)}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:hover{background:var(--pool);transform:translateY(-3px)}
+.to-top svg{width:22px;height:22px}
+.view{display:none}
+.view.active{display:block;animation:viewIn .6s var(--ease)}
+@keyframes viewIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(min-width:1000px){.step-line{display:block}}
+@media(max-width:880px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .split,.story,.contact-grid,.zone-grid,.svc-row,.form-row,.values{grid-template-columns:1fr}
+  .split.rev .split-media,.svc-row.rev .svc-row-media{order:0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .foot-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .media-badge{max-width:78%}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .caustics,#bubbles,#ripples,.marquee-track{display:none!important}
+  .hero h1 .word,.hero-eyebrow,.hero p.sub,.hero-actions,.hero-chips,.scroll-cue{opacity:1!important;transform:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fe3de"/><stop offset="1" stop-color="#0e7c8b"/></linearGradient>
+  <filter id="causticFilter"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.016" numOctaves="2" seed="4" result="noise"><animate attributeName="baseFrequency" dur="26s" values="0.012 0.016;0.016 0.012;0.012 0.016" repeatCount="indefinite"/></feTurbulence><feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.1  0 0 0 0 0.75  0 0 0 0 0.81  0 0 0 1 -0.55"/></filter>
+</defs></svg>
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#/" class="brand" data-route aria-label="Nova Pool inicio">
+      <svg class="drop" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C16 2 5 14.5 5 21.5a11 11 0 0 0 22 0C27 14.5 16 2 16 2Z" fill="url(#dg)"/><ellipse cx="12" cy="13.5" rx="2.2" ry="3" fill="rgba(255,255,255,.55)"/></svg>
+      <span class="brand-txt"><span class="brand-name">NOVA POOL</span><span class="brand-sub" data-i18n="brand.sub">Piscinas & Spa's</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a class="nav-link" data-route href="#/" data-i18n="nav.home">Inicio</a>
+      <a class="nav-link" data-route href="#/servicios" data-i18n="nav.services">Servicios</a>
+      <a class="nav-link" data-route href="#/zona" data-i18n="nav.zone">Zona</a>
+      <a class="nav-link" data-route href="#/nosotros" data-i18n="nav.about">Nosotros</a>
+      <a class="nav-link" data-route href="#/contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-seg" role="group" aria-label="Idioma">
+        <button data-lang="es" class="on">ES</button><button data-lang="ca">CA</button><button data-lang="en">EN</button>
+      </div>
+      <a class="btn btn-sun nav-cta" data-route href="#/contacto" data-i18n="nav.cta">Presupuesto gratis</a>
+      <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a class="m-link" data-route href="#/"><span class="num">01</span><span data-i18n="nav.home">Inicio</span></a>
+  <a class="m-link" data-route href="#/servicios"><span class="num">02</span><span data-i18n="nav.services">Servicios</span></a>
+  <a class="m-link" data-route href="#/zona"><span class="num">03</span><span data-i18n="nav.zone">Zona</span></a>
+  <a class="m-link" data-route href="#/nosotros"><span class="num">04</span><span data-i18n="nav.about">Nosotros</span></a>
+  <a class="m-link" data-route href="#/contacto"><span class="num">05</span><span data-i18n="nav.contact">Contacto</span></a>
+  <div class="mobile-foot">
+    <a href="tel:+34872071195">+34 872 07 11 95</a>
+    <a href="mailto:info@piscinasnovapool.com">info@piscinasnovapool.com</a>
+    <div class="lang-seg" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="ca">CA</button><button data-lang="en">EN</button></div>
+  </div>
+</div>
+<main id="app">
+<section class="view active" data-view="home">
+  <div class="hero">
+    <div class="caustics anim" id="hero-caustics"></div>
+    <div class="hero-glow"></div><div class="hero-glow two"></div>
+    <div id="bubbles"></div><div id="ripples"></div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Baix Empordà · Costa Brava · Diseño y construcción</span></span>
+      <h1 data-hero-title></h1>
+      <p class="sub" data-i18n="hero.sub">Diseño, construcción, reparación y mantenimiento de piscinas y spas en el Baix Empordà y la Costa Brava. De pequeña empresa familiar a referente del sector.</p>
+      <div class="hero-actions">
+        <a class="btn btn-sun" data-route href="#/contacto" data-magnetic><span data-i18n="hero.cta1">Solicitar presupuesto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost on-dark" href="https://wa.me/34622715991" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.1Z"/></svg><span>WhatsApp</span></a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-linecap="round"/></svg><span data-i18n="hero.chip1">Piscinas a medida</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg><span data-i18n="hero.chip2">Baix Empordà · Costa Brava</span></span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18M3 12h18M3 19h18" stroke-linecap="round"/></svg><span data-i18n="hero.chip3">Atención multilingüe</span></span>
+      </div>
+    </div>
+    <a href="#/" data-scrolldown class="scroll-cue" aria-hidden="true"><span class="mouse"></span><span data-i18n="hero.scroll">Descubre</span></a>
+    <div class="wave-sep" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#04232a" d="M0,40 C240,100 480,0 720,40 C960,80 1200,20 1440,60 L1440,120 L0,120 Z" opacity=".5"/><path fill="#f6fdfd" d="M0,70 C240,30 480,110 720,70 C960,30 1200,90 1440,60 L1440,120 L0,120 Z"/></svg></div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+  <span id="servicios-anchor"></span>
+  <div class="sec wrap">
+    <div class="sec-head center" data-reveal>
+      <span class="eyebrow center" data-i18n="svc.eyebrow">Servicios</span>
+      <h2 class="h-title" data-i18n="svc.title">Todo lo que tu piscina necesita</h2>
+      <p class="lead" style="margin-inline:auto" data-i18n="svc.intro">Diseño y construcción, reparación, mantenimiento y mucho más. Un enfoque integral para todo tipo de clientes, adaptándonos siempre a lo que necesitas.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card" data-reveal data-goto="servicios" tabindex="0" role="link">
+        <span class="svc-num">01</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20l5-1L19 9l-4-4L5 15l-1 5Z" stroke-linejoin="round"/><path d="M13 6l4 4" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="svc.1.t">Construcción de piscinas</h3>
+        <p data-i18n="svc.1.d">Diseñamos y construimos piscinas únicas y a medida: naturales, ecológicas, desbordantes, infinitas y con cascada. Te asesoramos para acertar con tu proyecto.</p>
+        <span class="svc-more"><span data-i18n="svc.more">Ver más</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="svc-card" data-reveal data-goto="servicios" tabindex="0" role="link">
+        <span class="svc-num">02</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.5 3.5a3.5 3.5 0 0 0-4.9 4.9l-6.1 6.1 2 2 6.1-6.1a3.5 3.5 0 0 0 4.9-4.9l-2.1 2.1-1.9-1.9z" stroke-linejoin="round"/><path d="M14 14l5 5M16.5 11.5l4 4" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="svc.2.t">Reparación de piscinas</h3>
+        <p data-i18n="svc.2.d">Nuestro servicio técnico repara todo tipo de averías en piscinas e instalaciones acuáticas, para particulares, comunidades, hoteles, campings y balnearios.</p>
+        <span class="svc-more"><span data-i18n="svc.more">Ver más</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="svc-card" data-reveal data-goto="servicios" tabindex="0" role="link">
+        <span class="svc-num">03</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 14c2 0 2 1.5 4.5 1.5S9 14 11.5 14 13 15.5 15.5 15.5 17 14 19.5 14 21 15.5 21 15.5M3 18.5c2 0 2 1.5 4.5 1.5S9 18.5 11.5 18.5 13 20 15.5 20 17 18.5 19.5 18.5 21 20 21 20" stroke-linecap="round"/><path d="M14 3.5 9 9l2.5 2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16.5" cy="6" r="2.2"/></svg></div>
+        <h3 data-i18n="svc.3.t">Mantenimiento de piscinas</h3>
+        <p data-i18n="svc.3.d">Control de filtración y desinfección con fotómetro digital, productos no agresivos aptos para todas las pieles, dosificación automática y revisión semanal.</p>
+        <span class="svc-more"><span data-i18n="svc.more">Ver más</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="svc-card" data-reveal data-goto="servicios" tabindex="0" role="link">
+        <span class="svc-num">04</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 13h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2Z" stroke-linejoin="round"/><path d="M7.5 9c0-1 1-1.2 1-2.2S7.5 5.6 7.5 4.5M12 9c0-1 1-1.2 1-2.2S12 5.6 12 4.5M16.5 9c0-1 1-1.2 1-2.2s-1-1.2-1-2.3" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="svc.4.t">Spa's y Jacuzzis</h3>
+        <p data-i18n="svc.4.d">Mantenimiento de spas y jacuzzis: control del agua caliente, sistemas aire/agua, calibración de sondas, limpieza con equipo especial y revisión semanal.</p>
+        <span class="svc-more"><span data-i18n="svc.more">Ver más</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="svc-card" data-reveal data-goto="servicios" tabindex="0" role="link">
+        <span class="svc-num">05</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="9" width="19" height="6" rx="2.5"/><path d="M8 9v6M16 9v6" stroke-linecap="round"/></svg></div>
+        <h3 data-i18n="svc.5.t">Reparación de tubos</h3>
+        <p data-i18n="svc.5.d">Rehabilitación de tuberías con resina epoxi mediante el sistema SprayPoxi, sin obras: revestimos el interior del tubo para protegerlo de la corrosión durante años.</p>
+        <span class="svc-more"><span data-i18n="svc.more">Ver más</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="svc-card" data-reveal data-goto="servicios" tabindex="0" role="link">
+        <span class="svc-num">06</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6"/><path d="m20.5 20.5-3.6-3.6" stroke-linecap="round"/><path d="M11 8.5c-1.3 1.3-1.8 2-1.8 2.8a1.8 1.8 0 0 0 3.6 0c0-.8-.5-1.5-1.8-2.8Z" stroke-linejoin="round"/></svg></div>
+        <h3 data-i18n="svc.6.t">Gas para fugas</h3>
+        <p data-i18n="svc.6.d">Detección de fugas con gas trazador en circuitos y estructura. Localizamos el punto exacto de la fuga para repararla sin obras innecesarias.</p>
+        <span class="svc-more"><span data-i18n="svc.more">Ver más</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+    </div>
+  </div>
+  <div class="band sec">
+    <div class="caustics anim" data-caustic></div><div class="band-glow"></div>
+    <div class="wrap" style="position:relative;z-index:3">
+      <div class="sec-head" data-reveal style="max-width:none">
+        <span class="eyebrow on-dark" data-i18n="why.eyebrow">Por qué Nova Pool</span>
+        <h2 class="h-title" style="color:#fff;margin-top:1rem;max-width:18ch" data-i18n="why.title">Profesionales y de confianza</h2>
+      </div>
+      <div class="why-grid" data-reveal>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 data-i18n="why.1.t">Empresa de confianza</h4><p data-i18n="why.1.d">De pequeña empresa familiar a referente del sector de las piscinas.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 data-i18n="why.2.t">Enfoque integral</h4><p data-i18n="why.2.d">Asesoramiento y acompañamiento en cada proyecto, de principio a fin.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 data-i18n="why.3.t">Atención multilingüe</h4><p data-i18n="why.3.d">Te atendemos en varios idiomas, sin barreras y con cercanía.</p></div></div>
+        <div class="why-item"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 data-i18n="why.4.t">Presupuesto sin compromiso</h4><p data-i18n="why.4.d">Asesoramiento y cotización gratuita, sin ningún compromiso.</p></div></div>
+      </div>
+      <div class="stats">
+        <div class="stat" data-reveal><div class="num" data-count="500" data-suffix="+">0</div><div class="lbl" data-i18n="stat.1">Proyectos realizados</div></div>
+        <div class="stat" data-reveal><div class="num" data-count="15" data-suffix="+">0</div><div class="lbl" data-i18n="stat.2">Años de experiencia</div></div>
+        <div class="stat" data-reveal><div class="num" data-count="6" data-suffix="">0</div><div class="lbl" data-i18n="stat.3">Servicios especializados</div></div>
+        <div class="stat" data-reveal><div class="num" data-count="5" data-suffix="">0</div><div class="lbl" data-i18n="stat.4">Tipos de piscina a medida</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec wrap">
+    <div class="split">
+      <div class="split-media" data-reveal="left">
+        <div class="water-art"><div class="caustics anim"></div></div>
+        <div class="media-float"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l5-1L19 9l-4-4L5 15l-1 5Z" stroke-linejoin="round"/><path d="M13 6l4 4" stroke-linecap="round"/></svg></div>
+        <div class="media-badge"><div class="big">6</div><div class="small" data-i18n="about.badge.l">servicios especializados</div></div>
+      </div>
+      <div class="split-body" data-reveal="right">
+        <span class="eyebrow" data-i18n="about.eyebrow">Sobre nosotros</span>
+        <h2 class="h-title" data-i18n="about.title">De empresa familiar a referente del sector</h2>
+        <p class="lead" data-i18n="about.p">Nova Pool nació como una pequeña empresa familiar en Palafrugell, con tienda en Mont-Ras. Con un concepto revolucionario y un enfoque integral, nos hemos convertido en un referente de las piscinas en el Baix Empordà y la Costa Brava.</p>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="about.f1">Enfoque y asesoramiento integral</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="about.f2">Servicio técnico propio</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="about.f3">Atención al cliente multilingüe</span></li>
+        </ul>
+        <a class="btn btn-ghost" data-route href="#/nosotros"><span data-i18n="about.cta">Conócenos</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="sec wrap" style="padding-top:0">
+    <div class="split rev">
+      <div class="split-media" data-reveal="right">
+        <div class="water-art"><div class="caustics anim"></div></div>
+        <div class="media-float"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <div class="media-badge"><div class="big">∞</div><div class="small" data-i18n="zone.badge.l">piscinas infinitas y desbordantes</div></div>
+      </div>
+      <div class="split-body" data-reveal="left">
+        <span class="eyebrow" data-i18n="zone.eyebrow">Zona de servicio</span>
+        <h2 class="h-title" data-i18n="zone.title">Baix Empordà y Costa Brava</h2>
+        <p class="lead" data-i18n="zone.p">Trabajamos en todo el Baix Empordà y la Costa Brava desde nuestra base en Mont-Ras. Y seguimos creciendo: hemos iniciado nuestra expansión a nivel nacional.</p>
+        <ul class="feature-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg><span data-i18n="zone.f1">Baix Empordà</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg><span data-i18n="zone.f2">Costa Brava y alrededores</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg><span data-i18n="zone.f3">Expansión a nivel nacional</span></li>
+        </ul>
+        <a class="btn btn-ghost" data-route href="#/zona"><span data-i18n="zone.cta">Ver zona de cobertura</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="tst sec">
+    <div class="wrap">
+      <div class="sec-head center" data-reveal>
+        <span class="eyebrow center" data-i18n="tst.eyebrow">Opiniones</span>
+        <h2 class="h-title" data-i18n="tst.title">Lo que opinan nuestros clientes</h2>
+      </div>
+      <div class="tst-viewport" data-reveal="scale"><div class="tst-track" id="tstTrack"></div></div>
+      <div class="tst-nav">
+        <button class="tst-arrow" id="tstPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="tst-dots" id="tstDots"></div>
+        <button class="tst-arrow" id="tstNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="cta-band sec">
+    <div class="caustics anim" data-caustic></div>
+    <div class="wrap"><div class="cta-inner" data-reveal>
+      <h2 data-i18n="cta.title">¿Hablamos de tu piscina?</h2>
+      <p data-i18n="cta.p">Cuéntanos tu proyecto y te preparamos un presupuesto sin compromiso. Estamos a un mensaje de distancia.</p>
+      <div class="cta-actions">
+        <a class="btn btn-sun" data-route href="#/contacto" data-magnetic><span data-i18n="cta.b1">Pedir presupuesto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost on-dark" href="tel:+34872071195"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3l1.5 5-2 1.5a11 11 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke-linejoin="round"/></svg><span>+34 872 07 11 95</span></a>
+      </div>
+    </div></div>
+  </div>
+</section>
+<section class="view" data-view="servicios">
+  <div class="page-hero">
+    <div class="caustics anim" data-caustic></div><div class="hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="crumbs"><a data-route href="#/" data-i18n="nav.home">Inicio</a> / <span data-i18n="nav.services">Servicios</span></div>
+      <h1 data-i18n="sp.title">Servicios de piscina y spa, de principio a fin</h1>
+      <p data-i18n="sp.sub">Diseño y construcción, reparación, mantenimiento, spas, reparación de tuberías y detección de fugas. Un servicio integral, con asesoramiento en cada paso.</p>
+    </div>
+  </div>
+  <div class="sec wrap">
+    <div class="svc-row" data-reveal>
+      <div class="svc-row-media" data-reveal="left"><div class="caustics anim"></div><div class="big-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 20l5-1L19 9l-4-4L5 15l-1 5Z" stroke-linejoin="round"/><path d="M13 6l4 4" stroke-linecap="round"/></svg></div></div>
+      <div data-reveal="right">
+        <div class="svc-row-num">01 — <span data-i18n="svc.1.t">Construcción de piscinas</span></div>
+        <h2 data-i18n="sp.1.t">Construcción de piscinas</h2>
+        <p data-i18n="sp.1.d">Diseñamos y construimos diferentes tipos de piscinas, cada una única y exclusiva, adaptándonos a las peticiones de cada cliente y asesorando para conseguir el resultado buscado. Las más demandadas: piscinas naturales, ecológicas, desbordantes, infinitas y con cascada. ¿No tienes claro qué piscina encaja en tu espacio? Te asesoramos sin compromiso.</p>
+        <div class="svc-tags"><span data-i18n="sp.1.a">Naturales y ecológicas</span><span data-i18n="sp.1.b">Desbordantes e infinitas</span><span data-i18n="sp.1.c">Con cascada</span><span data-i18n="sp.1.e">Diseño a medida</span></div>
+      </div>
+    </div>
+    <div class="svc-row rev" data-reveal>
+      <div class="svc-row-media" data-reveal="right"><div class="caustics anim"></div><div class="big-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14.5 3.5a3.5 3.5 0 0 0-4.9 4.9l-6.1 6.1 2 2 6.1-6.1a3.5 3.5 0 0 0 4.9-4.9l-2.1 2.1-1.9-1.9z" stroke-linejoin="round"/><path d="M14 14l5 5M16.5 11.5l4 4" stroke-linecap="round"/></svg></div></div>
+      <div data-reveal="left">
+        <div class="svc-row-num">02 — <span data-i18n="svc.2.t">Reparación de piscinas</span></div>
+        <h2 data-i18n="sp.2.t">Reparación de piscinas</h2>
+        <p data-i18n="sp.2.d">La experiencia de nuestro departamento de servicio técnico aporta total solvencia a la hora de reparar todo tipo de averías en piscinas e instalaciones acuáticas. Trabajamos para propietarios de viviendas con piscina, comunidades de propietarios, polideportivos, spas y balnearios, hoteles, campings y muchos más.</p>
+        <div class="svc-tags"><span data-i18n="sp.2.a">Todo tipo de averías</span><span data-i18n="sp.2.b">Particulares y comunidades</span><span data-i18n="sp.2.c">Hoteles y campings</span><span data-i18n="sp.2.e">Spas y balnearios</span></div>
+      </div>
+    </div>
+    <div class="svc-row" data-reveal>
+      <div class="svc-row-media" data-reveal="left"><div class="caustics anim"></div><div class="big-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 14c2 0 2 1.5 4.5 1.5S9 14 11.5 14 13 15.5 15.5 15.5 17 14 19.5 14 21 15.5 21 15.5M3 18.5c2 0 2 1.5 4.5 1.5S9 18.5 11.5 18.5 13 20 15.5 20 17 18.5 19.5 18.5 21 20 21 20" stroke-linecap="round"/><path d="M14 3.5 9 9l2.5 2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16.5" cy="6" r="2.2"/></svg></div></div>
+      <div data-reveal="right">
+        <div class="svc-row-num">03 — <span data-i18n="svc.3.t">Mantenimiento de piscinas</span></div>
+        <h2 data-i18n="sp.3.t">Mantenimiento de piscinas</h2>
+        <p data-i18n="sp.3.d">Controlamos los equipos de filtración y desinfección con analíticas mediante fotómetro digital acreditado, aplicamos productos químicos no agresivos aptos para todo tipo de pieles e instalamos sistemas de dosificación automática para un control automatizado del agua. Revisión semanal de los sistemas hidráulicos con aviso inmediato en caso de avería o fuga.</p>
+        <div class="svc-tags"><span data-i18n="sp.3.a">Fotómetro digital</span><span data-i18n="sp.3.b">Productos no agresivos</span><span data-i18n="sp.3.c">Dosificación automática</span><span data-i18n="sp.3.e">Revisión semanal</span></div>
+      </div>
+    </div>
+    <div class="svc-row rev" data-reveal>
+      <div class="svc-row-media" data-reveal="right"><div class="caustics anim"></div><div class="big-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 13h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2Z" stroke-linejoin="round"/><path d="M7.5 9c0-1 1-1.2 1-2.2S7.5 5.6 7.5 4.5M12 9c0-1 1-1.2 1-2.2S12 5.6 12 4.5M16.5 9c0-1 1-1.2 1-2.2s-1-1.2-1-2.3" stroke-linecap="round"/></svg></div></div>
+      <div data-reveal="left">
+        <div class="svc-row-num">04 — <span data-i18n="svc.4.t">Spa's y Jacuzzis</span></div>
+        <h2 data-i18n="sp.4.t">Spa's y Jacuzzis</h2>
+        <p data-i18n="sp.4.d">Control de los parámetros del agua caliente y mantenimiento de los sistemas aire/agua de spas y jacuzzis. Calibramos sondas de medición especiales, limpiamos con equipamiento específico y dosificamos productos desinfectantes adecuados para agua caliente. Revisión semanal de los sistemas hidráulicos con aviso inmediato ante cualquier incidencia.</p>
+        <div class="svc-tags"><span data-i18n="sp.4.a">Agua caliente</span><span data-i18n="sp.4.b">Sistemas aire/agua</span><span data-i18n="sp.4.c">Calibración de sondas</span><span data-i18n="sp.4.e">Equipo especial</span></div>
+      </div>
+    </div>
+    <div class="svc-row" data-reveal>
+      <div class="svc-row-media" data-reveal="left"><div class="caustics anim"></div><div class="big-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2.5" y="9" width="19" height="6" rx="2.5"/><path d="M8 9v6M16 9v6" stroke-linecap="round"/></svg></div></div>
+      <div data-reveal="right">
+        <div class="svc-row-num">05 — <span data-i18n="svc.5.t">Reparación de tubos</span></div>
+        <h2 data-i18n="sp.5.t">Reparación de tubos</h2>
+        <p data-i18n="sp.5.d">Rehabilitamos tuberías con resina epoxi aplicada con el sistema SprayPoxi, que alarga la vida del tubo durante años. El material resiste la presión, los detergentes, los químicos y las grasas, y protege frente a la corrosión y el desgaste. Revestimos el interior sin obra, accediendo por registro o bajante, para un acabado liso y un flujo óptimo.</p>
+        <div class="svc-tags"><span data-i18n="sp.5.a">Resina epoxi</span><span data-i18n="sp.5.b">Sistema SprayPoxi</span><span data-i18n="sp.5.c">Sin obras</span><span data-i18n="sp.5.e">Protección duradera</span></div>
+      </div>
+    </div>
+    <div class="svc-row rev" data-reveal>
+      <div class="svc-row-media" data-reveal="right"><div class="caustics anim"></div><div class="big-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="11" cy="11" r="6"/><path d="m20.5 20.5-3.6-3.6" stroke-linecap="round"/><path d="M11 8.5c-1.3 1.3-1.8 2-1.8 2.8a1.8 1.8 0 0 0 3.6 0c0-.8-.5-1.5-1.8-2.8Z" stroke-linejoin="round"/></svg></div></div>
+      <div data-reveal="left">
+        <div class="svc-row-num">06 — <span data-i18n="svc.6.t">Gas para fugas</span></div>
+        <h2 data-i18n="sp.6.t">Gas para fugas</h2>
+        <p data-i18n="sp.6.d">Localizamos fugas con gas trazador revisando los circuitos de impulsión, limpiafondos, fondo y skimmer, además de la estructura: suelo, paredes y accesorios. Hacemos las pruebas in situ para detectar el punto exacto de la fuga y repararla sin necesidad de obras en las zonas donde las líneas están en buen estado.</p>
+        <div class="svc-tags"><span data-i18n="sp.6.a">Gas trazador</span><span data-i18n="sp.6.b">Localización exacta</span><span data-i18n="sp.6.c">Sin obras innecesarias</span><span data-i18n="sp.6.e">Circuito y estructura</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sec wrap" style="padding-top:0">
+    <div class="sec-head center" data-reveal>
+      <span class="eyebrow center" data-i18n="proc.eyebrow">Cómo trabajamos</span>
+      <h2 class="h-title" data-i18n="proc.title">Sencillo, de principio a fin</h2>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal><div class="step-n">01</div><h3 data-i18n="proc.1.t">Contacto</h3><p data-i18n="proc.1.d">Nos cuentas tu proyecto o tu avería por teléfono, WhatsApp o formulario.</p><svg class="step-line" width="32" height="20" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 10h28M22 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step" data-reveal><div class="step-n">02</div><h3 data-i18n="proc.2.t">Asesoramiento y visita</h3><p data-i18n="proc.2.d">Te asesoramos y, si hace falta, visitamos el espacio para definir tu proyecto.</p><svg class="step-line" width="32" height="20" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 10h28M22 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step" data-reveal><div class="step-n">03</div><h3 data-i18n="proc.3.t">Presupuesto sin compromiso</h3><p data-i18n="proc.3.d">Recibes una cotización clara y gratuita, sin ningún compromiso.</p><svg class="step-line" width="32" height="20" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M0 10h28M22 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="step" data-reveal><div class="step-n">04</div><h3 data-i18n="proc.4.t">Manos a la obra</h3><p data-i18n="proc.4.d">Ejecutamos el trabajo y te acompañamos también después, con el mantenimiento.</p></div>
+    </div>
+  </div>
+  <div class="cta-band sec">
+    <div class="caustics anim" data-caustic></div>
+    <div class="wrap"><div class="cta-inner" data-reveal>
+      <h2 data-i18n="cta.title">¿Hablamos de tu piscina?</h2>
+      <p data-i18n="cta.p">Cuéntanos tu proyecto y te preparamos un presupuesto sin compromiso. Estamos a un mensaje de distancia.</p>
+      <div class="cta-actions">
+        <a class="btn btn-sun" data-route href="#/contacto" data-magnetic><span data-i18n="cta.b1">Pedir presupuesto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost on-dark" href="https://wa.me/34622715991" target="_blank" rel="noopener"><span>WhatsApp</span></a>
+      </div>
+    </div></div>
+  </div>
+</section>
+<section class="view" data-view="zona">
+  <div class="page-hero">
+    <div class="caustics anim" data-caustic></div><div class="hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="crumbs"><a data-route href="#/" data-i18n="nav.home">Inicio</a> / <span data-i18n="nav.zone">Zona</span></div>
+      <h1 data-i18n="zp.title">Baix Empordà, Costa Brava y más allá</h1>
+      <p data-i18n="zp.sub">Con base en Mont-Ras (Girona), damos servicio en todo el Baix Empordà y la Costa Brava. Además, hemos iniciado nuestra expansión a nivel nacional. Si no ves tu localidad, escríbenos.</p>
+    </div>
+  </div>
+  <div class="sec wrap">
+    <div class="zone-grid">
+      <div class="zone-col" data-reveal="left">
+        <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+        <h3 data-i18n="zp.g.t">Baix Empordà</h3>
+        <div class="sub" data-i18n="zp.g.s">Nuestra comarca · Girona</div>
+        <div class="town-list"><span>Mont-Ras</span><span>Palafrugell</span><span>Palamós</span><span>Begur</span><span>Pals</span><span>Calonge i Sant Antoni</span><span>La Bisbal d'Empordà</span><span>Torroella de Montgrí</span><span>Forallac</span><span>Regencós</span><span>Calella de Palafrugell</span><span>Llafranc</span></div>
+      </div>
+      <div class="zone-col" data-reveal="right">
+        <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+        <h3 data-i18n="zp.b.t">Costa Brava</h3>
+        <div class="sub" data-i18n="zp.b.s">y alrededores</div>
+        <div class="town-list"><span>Girona</span><span>Platja d'Aro</span><span>Sant Feliu de Guíxols</span><span>Castell d'Aro</span><span>Santa Cristina d'Aro</span><span>Lloret de Mar</span><span>Blanes</span><span>L'Escala</span><span>Roses</span><span>Empuriabrava</span></div>
+      </div>
+    </div>
+    <p class="zone-note" data-reveal><span data-i18n="zp.note">¿Tu proyecto está fuera de esta zona?</span> <a data-route href="#/contacto" style="color:var(--pool);font-weight:700"><span data-i18n="zp.note.link">Consúltanos: estamos creciendo →</span></a></p>
+  </div>
+  <div class="cta-band sec">
+    <div class="caustics anim" data-caustic></div>
+    <div class="wrap"><div class="cta-inner" data-reveal>
+      <h2 data-i18n="zp.cta.t">¿Sueñas con una nueva piscina?</h2>
+      <p data-i18n="cta.p">Cuéntanos tu proyecto y te preparamos un presupuesto sin compromiso. Estamos a un mensaje de distancia.</p>
+      <div class="cta-actions"><a class="btn btn-sun" data-route href="#/contacto" data-magnetic><span data-i18n="cta.b1">Pedir presupuesto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div></div>
+  </div>
+</section>
+<section class="view" data-view="nosotros">
+  <div class="page-hero">
+    <div class="caustics anim" data-caustic></div><div class="hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="crumbs"><a data-route href="#/" data-i18n="nav.home">Inicio</a> / <span data-i18n="nav.about">Nosotros</span></div>
+      <h1 data-i18n="np.title">De empresa familiar a referente del sector</h1>
+      <p data-i18n="np.sub">Empezamos como un pequeño negocio familiar y hoy somos un referente de las piscinas en el Baix Empordà y la Costa Brava, sin perder nunca el trato cercano de siempre.</p>
+    </div>
+  </div>
+  <div class="sec wrap">
+    <div class="story">
+      <div class="story-text" data-reveal="left">
+        <p data-i18n-html="np.p1"><strong>Nova Pool nació en Palafrugell</strong>, con tienda en Mont-Ras, desde donde comenzó su expansión con un concepto revolucionario en el sector de las piscinas.</p>
+        <p data-i18n="np.p2">Hemos pasado de ser una pequeña empresa familiar a convertirnos en un referente, diseñando y construyendo piscinas únicas y exclusivas: naturales, ecológicas, desbordantes, infinitas y con cascada.</p>
+        <p data-i18n="np.p3">En cada proyecto aplicamos un enfoque y un asesoramiento integral, adaptándonos a las necesidades de cada cliente: particulares, comunidades de propietarios, hoteles, campings, polideportivos y balnearios.</p>
+        <p data-i18n="np.p4">Nuestro servicio de atención al cliente es multilingüe y te acompaña en todo momento. Pídenos asesoramiento y un presupuesto sin compromiso: hagamos realidad la piscina que imaginas.</p>
+      </div>
+      <div data-reveal="right">
+        <div class="split-media" style="aspect-ratio:3/4"><div class="water-art"><div class="caustics anim"></div></div><div class="media-badge"><div class="big">5</div><div class="small" data-i18n="np.badge.l">tipos de piscina a medida</div></div></div>
+        <div class="values">
+          <div class="value"><div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/></svg></div><h4 data-i18n="np.v1.t">Profesionalidad</h4><p data-i18n="np.v1.d">Un equipo técnico con experiencia y total solvencia.</p></div>
+          <div class="value"><div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4 data-i18n="np.v2.t">Compromiso</h4><p data-i18n="np.v2.d">Cumplimos los objetivos y respondemos cuando se nos necesita.</p></div>
+          <div class="value"><div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 2.9 6.3 6.8.6-5.1 4.5 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 8.9l6.8-.6z" stroke-linejoin="round"/></svg></div><h4 data-i18n="np.v3.t">Calidad</h4><p data-i18n="np.v3.d">Materiales y acabados de calidad en cada proyecto.</p></div>
+          <div class="value"><div class="v-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.6 1c0 1.7-2.6 1.9-2.6 3.5M12 17.5h.01" stroke-linecap="round"/></svg></div><h4 data-i18n="np.v4.t">Precio justo</h4><p data-i18n="np.v4.d">Te recomendamos solo lo que necesitas, a un precio justo.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band sec">
+    <div class="caustics anim" data-caustic></div><div class="band-glow"></div>
+    <div class="wrap" style="position:relative;z-index:3">
+      <div class="sec-head center" data-reveal style="margin-inline:auto">
+        <span class="eyebrow on-dark center" data-i18n="np.stats.eyebrow">En cifras</span>
+        <h2 class="h-title" style="color:#fff;margin-top:1rem" data-i18n="np.stats.title">Nuestro trabajo en números</h2>
+      </div>
+      <div class="stats">
+        <div class="stat" data-reveal><div class="num" data-count="500" data-suffix="+">0</div><div class="lbl" data-i18n="stat.1">Proyectos realizados</div></div>
+        <div class="stat" data-reveal><div class="num" data-count="15" data-suffix="+">0</div><div class="lbl" data-i18n="stat.2">Años de experiencia</div></div>
+        <div class="stat" data-reveal><div class="num" data-count="6" data-suffix="">0</div><div class="lbl" data-i18n="stat.3">Servicios especializados</div></div>
+        <div class="stat" data-reveal><div class="num" data-count="5" data-suffix="">0</div><div class="lbl" data-i18n="stat.4">Tipos de piscina a medida</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="cta-band sec">
+    <div class="caustics anim" data-caustic></div>
+    <div class="wrap"><div class="cta-inner" data-reveal>
+      <h2 data-i18n="cta.title">¿Hablamos de tu piscina?</h2>
+      <p data-i18n="cta.p">Cuéntanos tu proyecto y te preparamos un presupuesto sin compromiso. Estamos a un mensaje de distancia.</p>
+      <div class="cta-actions"><a class="btn btn-sun" data-route href="#/contacto" data-magnetic><span data-i18n="cta.b1">Pedir presupuesto</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div></div>
+  </div>
+</section>
+<section class="view" data-view="contacto">
+  <div class="page-hero">
+    <div class="caustics anim" data-caustic></div><div class="hero-glow"></div>
+    <div class="page-hero-inner">
+      <div class="crumbs"><a data-route href="#/" data-i18n="nav.home">Inicio</a> / <span data-i18n="nav.contact">Contacto</span></div>
+      <h1 data-i18n="cp.title">Hablemos de tu piscina</h1>
+      <p data-i18n="cp.sub">Pídenos asesoramiento y un presupuesto sin compromiso. Te atendemos en varios idiomas.</p>
+    </div>
+  </div>
+  <div class="sec wrap">
+    <div class="contact-grid">
+      <div class="contact-cards" data-reveal="left">
+        <a class="c-card" href="tel:+34872071195"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h3l1.5 5-2 1.5a11 11 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke-linejoin="round"/></svg></span><div><div class="c-lbl" data-i18n="cp.phone">Teléfono</div><div class="c-val">+34 872 07 11 95</div></div></a>
+        <a class="c-card" href="mailto:info@piscinasnovapool.com"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="c-lbl" data-i18n="cp.email">Email</div><div class="c-val">info@piscinasnovapool.com</div></div></a>
+        <a class="c-card" href="https://wa.me/34622715991" target="_blank" rel="noopener"><span class="c-ico" style="background:#1faf54"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.1Z"/></svg></span><div><div class="c-lbl">WhatsApp</div><div class="c-val">+34 622 71 59 91</div></div></a>
+        <div class="c-card"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg></span><div><div class="c-lbl" data-i18n="cp.address">Dirección</div><div class="c-val" style="font-size:.98rem;line-height:1.4">Avinguda de Catalunya, 21<br>17253 Mont-Ras, Girona</div></div></div>
+        <a class="c-card" href="mailto:comercial@piscinasnovapool.com"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M16 3l2 2-2 2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="c-lbl" data-i18n="cp.comercial">Comercial</div><div class="c-val" style="font-size:.98rem">comercial@piscinasnovapool.com</div></div></a>
+      </div>
+      <div class="form-wrap" data-reveal="right">
+        <h3 style="font-size:1.5rem;margin-bottom:.4rem" data-i18n="cp.form.title">Solicita tu presupuesto</h3>
+        <p class="muted" style="margin-bottom:1.6rem;font-size:.95rem" data-i18n="cp.form.sub">Rellena el formulario y te contactamos lo antes posible. Atención multilingüe.</p>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="f-name" data-i18n="cp.f.name">Nombre</label><input id="f-name" name="name" type="text" required data-ph="cp.f.name.ph" placeholder="Tu nombre"></div>
+            <div class="field"><label for="f-phone" data-i18n="cp.f.phone">Teléfono</label><input id="f-phone" name="phone" type="tel" data-ph="cp.f.phone.ph" placeholder="Tu teléfono"></div>
+          </div>
+          <div class="field"><label for="f-email" data-i18n="cp.f.email">Email</label><input id="f-email" name="email" type="email" required data-ph="cp.f.email.ph" placeholder="tu@email.com"></div>
+          <div class="field"><label for="f-msg" data-i18n="cp.f.msg">¿Qué necesitas?</label><textarea id="f-msg" name="msg" data-ph="cp.f.msg.ph" placeholder="Cuéntanos sobre tu proyecto o tu piscina y qué servicio te interesa…"></textarea></div>
+          <button type="submit" class="btn btn-sun" style="width:100%"><span data-i18n="cp.f.send">Enviar solicitud</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="form-msg" id="formMsg"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="cp.f.ok">¡Gracias! Abrimos tu correo para enviar la solicitud.</span></div>
+          <p class="form-note" data-i18n="cp.f.note">Al enviar, se abrirá tu aplicación de correo con el mensaje listo. También puedes llamarnos o escribirnos por WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+    <div class="map-panel" data-reveal>
+      <div class="caustics anim" data-caustic></div>
+      <div class="map-inner">
+        <div class="pin-big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <h4>Nova Pool · Mont-Ras</h4>
+        <p>Avinguda de Catalunya, 21 — 17253 Mont-Ras, Girona</p>
+        <a class="btn btn-aqua" href="https://www.google.com/maps/search/?api=1&query=Avinguda+de+Catalunya+21+Mont-Ras+Girona" target="_blank" rel="noopener"><span data-i18n="cp.map">Ver en Google Maps</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="caustics anim" data-caustic></div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#/" class="brand" data-route><svg class="drop" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2C16 2 5 14.5 5 21.5a11 11 0 0 0 22 0C27 14.5 16 2 16 2Z" fill="url(#dg)"/><ellipse cx="12" cy="13.5" rx="2.2" ry="3" fill="rgba(255,255,255,.55)"/></svg><span class="brand-txt"><span class="brand-name">NOVA POOL</span><span class="brand-sub" data-i18n="brand.sub">Piscinas & Spa's</span></span></a>
+        <p class="foot-about" data-i18n="foot.about">Diseño, construcción, reparación y mantenimiento de piscinas y spas en el Baix Empordà y la Costa Brava. De empresa familiar a referente del sector.</p>
+        <div class="foot-social">
+          <a href="https://wa.me/34622715991" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="20" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.1Z"/></svg></a>
+          <a href="mailto:info@piscinasnovapool.com" aria-label="Email"><svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round"/></svg></a>
+          <a href="tel:+34872071195" aria-label="Teléfono"><svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h3l1.5 5-2 1.5a11 11 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col"><h4 data-i18n="foot.nav">Navegación</h4><ul>
+        <li><a data-route href="#/" data-i18n="nav.home">Inicio</a></li>
+        <li><a data-route href="#/servicios" data-i18n="nav.services">Servicios</a></li>
+        <li><a data-route href="#/zona" data-i18n="nav.zone">Zona</a></li>
+        <li><a data-route href="#/nosotros" data-i18n="nav.about">Nosotros</a></li>
+        <li><a data-route href="#/contacto" data-i18n="nav.contact">Contacto</a></li>
+      </ul></div>
+      <div class="foot-col"><h4 data-i18n="foot.services">Servicios</h4><ul>
+        <li><a data-route href="#/servicios" data-i18n="svc.1.t">Construcción de piscinas</a></li>
+        <li><a data-route href="#/servicios" data-i18n="svc.2.t">Reparación de piscinas</a></li>
+        <li><a data-route href="#/servicios" data-i18n="svc.3.t">Mantenimiento de piscinas</a></li>
+        <li><a data-route href="#/servicios" data-i18n="svc.4.t">Spa's y Jacuzzis</a></li>
+      </ul></div>
+      <div class="foot-col"><h4 data-i18n="foot.contact">Contacto</h4><ul class="foot-contact">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.2"/></svg><span>Avinguda de Catalunya, 21<br>17253 Mont-Ras, Girona</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h3l1.5 5-2 1.5a11 11 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke-linejoin="round"/></svg><a href="tel:+34872071195">+34 872 07 11 95</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round"/></svg><a href="mailto:info@piscinasnovapool.com">info@piscinasnovapool.com</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round"/></svg><a href="mailto:comercial@piscinasnovapool.com">comercial@piscinasnovapool.com</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.rights">© 2025 Nova Pool & Spa's · Diseño y mantenimiento de piscinas. Todos los derechos reservados.</span>
+      <div class="lang-seg" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="ca">CA</button><button data-lang="en">EN</button></div>
+    </div>
+  </div>
+</footer>
+<a class="fab-wa" href="https://wa.me/34622715991" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.7.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3 0 .2 0 .8-.2 1.1Z"/></svg></a>
+<button class="to-top" id="toTop" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<script>
+"use strict";
+const HERO_TITLES={
+  es:"Diseñamos y construimos la piscina de tus |sueños|",
+  ca:"Dissenyem i construïm la piscina dels teus |somnis|",
+  en:"We design and build the pool of your |dreams|"
+};
+const DICT={
+ca:{
+"brand.sub":"Piscines & Spa's",
+"nav.home":"Inici","nav.services":"Serveis","nav.zone":"Zona","nav.about":"Nosaltres","nav.contact":"Contacte","nav.cta":"Pressupost gratis",
+"hero.eyebrow":"Baix Empordà · Costa Brava · Disseny i construcció",
+"hero.sub":"Disseny, construcció, reparació i manteniment de piscines i spas al Baix Empordà i la Costa Brava. De petita empresa familiar a referent del sector.",
+"hero.cta1":"Demanar pressupost","hero.scroll":"Descobreix",
+"hero.chip1":"Piscines a mida","hero.chip2":"Baix Empordà · Costa Brava","hero.chip3":"Atenció multilingüe",
+"svc.eyebrow":"Serveis","svc.title":"Tot el que la teva piscina necessita",
+"svc.intro":"Disseny i construcció, reparació, manteniment i molt més. Un enfocament integral per a tot tipus de clients, adaptant-nos sempre al que necessites.","svc.more":"Veure més",
+"svc.1.t":"Construcció de piscines","svc.1.d":"Dissenyem i construïm piscines úniques i a mida: naturals, ecològiques, desbordants, infinites i amb cascada. T'assessorem per encertar amb el teu projecte.",
+"svc.2.t":"Reparació de piscines","svc.2.d":"El nostre servei tècnic repara tota mena d'avaries en piscines i instal·lacions aquàtiques, per a particulars, comunitats, hotels, càmpings i balnearis.",
+"svc.3.t":"Manteniment de piscines","svc.3.d":"Control de filtració i desinfecció amb fotòmetre digital, productes no agressius aptes per a totes les pells, dosificació automàtica i revisió setmanal.",
+"svc.4.t":"Spa's i Jacuzzis","svc.4.d":"Manteniment d'spas i jacuzzis: control de l'aigua calenta, sistemes aire/aigua, calibratge de sondes, neteja amb equip especial i revisió setmanal.",
+"svc.5.t":"Reparació de tubs","svc.5.d":"Rehabilitació de canonades amb resina epoxi mitjançant el sistema SprayPoxi, sense obres: revestim l'interior del tub per protegir-lo de la corrosió durant anys.",
+"svc.6.t":"Gas per a fuites","svc.6.d":"Detecció de fuites amb gas traçador en circuits i estructura. Localitzem el punt exacte de la fuita per reparar-la sense obres innecessàries.",
+"why.eyebrow":"Per què Nova Pool","why.title":"Professionals i de confiança",
+"why.1.t":"Empresa de confiança","why.1.d":"De petita empresa familiar a referent del sector de les piscines.",
+"why.2.t":"Enfocament integral","why.2.d":"Assessorament i acompanyament en cada projecte, de principi a fi.",
+"why.3.t":"Atenció multilingüe","why.3.d":"T'atenem en diversos idiomes, sense barreres i amb proximitat.",
+"why.4.t":"Pressupost sense compromís","why.4.d":"Assessorament i pressupost gratuït, sense cap compromís.",
+"stat.1":"Projectes realitzats","stat.2":"Anys d'experiència","stat.3":"Serveis especialitzats","stat.4":"Tipus de piscina a mida",
+"about.eyebrow":"Sobre nosaltres","about.title":"D'empresa familiar a referent del sector",
+"about.p":"Nova Pool va néixer com una petita empresa familiar a Palafrugell, amb botiga a Mont-Ras. Amb un concepte revolucionari i un enfocament integral, ens hem convertit en un referent de les piscines al Baix Empordà i la Costa Brava.",
+"about.f1":"Enfocament i assessorament integral","about.f2":"Servei tècnic propi","about.f3":"Atenció al client multilingüe","about.cta":"Coneix-nos","about.badge.l":"serveis especialitzats",
+"zone.eyebrow":"Zona de servei","zone.title":"Baix Empordà i Costa Brava",
+"zone.p":"Treballem a tot el Baix Empordà i la Costa Brava des de la nostra base a Mont-Ras. I seguim creixent: hem iniciat la nostra expansió a nivell nacional.",
+"zone.f1":"Baix Empordà","zone.f2":"Costa Brava i rodalia","zone.f3":"Expansió a nivell nacional","zone.cta":"Veure zona de cobertura","zone.badge.l":"piscines infinites i desbordants",
+"tst.eyebrow":"Opinions","tst.title":"Què opinen els nostres clients",
+"cta.title":"Parlem de la teva piscina?","cta.p":"Explica'ns el teu projecte i et preparem un pressupost sense compromís. Som a un missatge de distància.","cta.b1":"Demanar pressupost",
+"sp.title":"Serveis de piscina i spa, de principi a fi","sp.sub":"Disseny i construcció, reparació, manteniment, spas, reparació de canonades i detecció de fuites. Un servei integral, amb assessorament a cada pas.",
+"sp.1.t":"Construcció de piscines","sp.1.d":"Dissenyem i construïm diferents tipus de piscines, cadascuna única i exclusiva, adaptant-nos a les peticions de cada client i assessorant per aconseguir el resultat buscat. Les més demanades: piscines naturals, ecològiques, desbordants, infinites i amb cascada. No tens clar quina piscina encaixa al teu espai? T'assessorem sense compromís.",
+"sp.1.a":"Naturals i ecològiques","sp.1.b":"Desbordants i infinites","sp.1.c":"Amb cascada","sp.1.e":"Disseny a mida",
+"sp.2.t":"Reparació de piscines","sp.2.d":"L'experiència del nostre departament de servei tècnic aporta total solvència a l'hora de reparar tota mena d'avaries en piscines i instal·lacions aquàtiques. Treballem per a propietaris d'habitatges amb piscina, comunitats de propietaris, poliesportius, spas i balnearis, hotels, càmpings i molts més.",
+"sp.2.a":"Tota mena d'avaries","sp.2.b":"Particulars i comunitats","sp.2.c":"Hotels i càmpings","sp.2.e":"Spas i balnearis",
+"sp.3.t":"Manteniment de piscines","sp.3.d":"Controlem els equips de filtració i desinfecció amb analítiques mitjançant fotòmetre digital acreditat, apliquem productes químics no agressius aptes per a tota mena de pells i instal·lem sistemes de dosificació automàtica per a un control automatitzat de l'aigua. Revisió setmanal dels sistemes hidràulics amb avís immediat en cas d'avaria o fuita.",
+"sp.3.a":"Fotòmetre digital","sp.3.b":"Productes no agressius","sp.3.c":"Dosificació automàtica","sp.3.e":"Revisió setmanal",
+"sp.4.t":"Spa's i Jacuzzis","sp.4.d":"Control dels paràmetres de l'aigua calenta i manteniment dels sistemes aire/aigua d'spas i jacuzzis. Calibrem sondes de mesura especials, netegem amb equipament específic i dosifiquem productes desinfectants adequats per a aigua calenta. Revisió setmanal dels sistemes hidràulics amb avís immediat davant qualsevol incidència.",
+"sp.4.a":"Aigua calenta","sp.4.b":"Sistemes aire/aigua","sp.4.c":"Calibratge de sondes","sp.4.e":"Equip especial",
+"sp.5.t":"Reparació de tubs","sp.5.d":"Rehabilitem canonades amb resina epoxi aplicada amb el sistema SprayPoxi, que allarga la vida del tub durant anys. El material resisteix la pressió, els detergents, els químics i els greixos, i protegeix de la corrosió i el desgast. Revestim l'interior sense obra, accedint per registre o baixant, per a un acabat llis i un flux òptim.",
+"sp.5.a":"Resina epoxi","sp.5.b":"Sistema SprayPoxi","sp.5.c":"Sense obres","sp.5.e":"Protecció duradora",
+"sp.6.t":"Gas per a fuites","sp.6.d":"Localitzem fuites amb gas traçador revisant els circuits d'impulsió, neteja-fons, fons i skimmer, a més de l'estructura: terra, parets i accessoris. Fem les proves in situ per detectar el punt exacte de la fuita i reparar-la sense necessitat d'obres a les zones on les línies estan en bon estat.",
+"sp.6.a":"Gas traçador","sp.6.b":"Localització exacta","sp.6.c":"Sense obres innecessàries","sp.6.e":"Circuit i estructura",
+"proc.eyebrow":"Com treballem","proc.title":"Senzill, de principi a fi",
+"proc.1.t":"Contacte","proc.1.d":"Ens expliques el teu projecte o la teva avaria per telèfon, WhatsApp o formulari.",
+"proc.2.t":"Assessorament i visita","proc.2.d":"T'assessorem i, si cal, visitem l'espai per definir el teu projecte.",
+"proc.3.t":"Pressupost sense compromís","proc.3.d":"Reps un pressupost clar i gratuït, sense cap compromís.",
+"proc.4.t":"Mans a l'obra","proc.4.d":"Executem la feina i t'acompanyem també després, amb el manteniment.",
+"zp.title":"Baix Empordà, Costa Brava i més enllà","zp.sub":"Amb base a Mont-Ras (Girona), donem servei a tot el Baix Empordà i la Costa Brava. A més, hem iniciat la nostra expansió a nivell nacional. Si no hi veus la teva localitat, escriu-nos.",
+"zp.g.t":"Baix Empordà","zp.g.s":"La nostra comarca · Girona","zp.b.t":"Costa Brava","zp.b.s":"i rodalia",
+"zp.note":"El teu projecte és fora d'aquesta zona?","zp.note.link":"Consulta'ns: estem creixent →","zp.cta.t":"Somies amb una nova piscina?",
+"np.title":"D'empresa familiar a referent del sector","np.sub":"Vam començar com un petit negoci familiar i avui som un referent de les piscines al Baix Empordà i la Costa Brava, sense perdre mai el tracte proper de sempre.",
+"np.p1":"<strong>Nova Pool va néixer a Palafrugell</strong>, amb botiga a Mont-Ras, des d'on va començar la seva expansió amb un concepte revolucionari en el sector de les piscines.",
+"np.p2":"Hem passat de ser una petita empresa familiar a convertir-nos en un referent, dissenyant i construint piscines úniques i exclusives: naturals, ecològiques, desbordants, infinites i amb cascada.",
+"np.p3":"En cada projecte apliquem un enfocament i un assessorament integral, adaptant-nos a les necessitats de cada client: particulars, comunitats de propietaris, hotels, càmpings, poliesportius i balnearis.",
+"np.p4":"El nostre servei d'atenció al client és multilingüe i t'acompanya en tot moment. Demana'ns assessorament i un pressupost sense compromís: fem realitat la piscina que imagines.",
+"np.badge.l":"tipus de piscina a mida",
+"np.v1.t":"Professionalitat","np.v1.d":"Un equip tècnic amb experiència i total solvència.",
+"np.v2.t":"Compromís","np.v2.d":"Complim els objectius i responem quan se'ns necessita.",
+"np.v3.t":"Qualitat","np.v3.d":"Materials i acabats de qualitat en cada projecte.",
+"np.v4.t":"Preu just","np.v4.d":"Et recomanem només el que necessites, a un preu just.",
+"np.stats.eyebrow":"En xifres","np.stats.title":"La nostra feina en números",
+"cp.title":"Parlem de la teva piscina","cp.sub":"Demana'ns assessorament i un pressupost sense compromís. T'atenem en diversos idiomes.",
+"cp.phone":"Telèfon","cp.email":"Correu","cp.address":"Adreça","cp.comercial":"Comercial",
+"cp.form.title":"Demana el teu pressupost","cp.form.sub":"Omple el formulari i et contactem com més aviat millor. Atenció multilingüe.",
+"cp.f.name":"Nom","cp.f.name.ph":"El teu nom","cp.f.phone":"Telèfon","cp.f.phone.ph":"El teu telèfon","cp.f.email":"Correu","cp.f.email.ph":"tu@correu.com","cp.f.msg":"Què necessites?","cp.f.msg.ph":"Explica'ns sobre el teu projecte o la teva piscina i quin servei t'interessa…","cp.f.send":"Enviar sol·licitud","cp.f.ok":"Gràcies! Obrim el teu correu per enviar la sol·licitud.","cp.f.note":"En enviar, s'obrirà la teva aplicació de correu amb el missatge a punt. També pots trucar-nos o escriure'ns per WhatsApp.",
+"cp.map":"Veure a Google Maps",
+"foot.about":"Disseny, construcció, reparació i manteniment de piscines i spas al Baix Empordà i la Costa Brava. D'empresa familiar a referent del sector.",
+"foot.nav":"Navegació","foot.services":"Serveis","foot.contact":"Contacte",
+"foot.rights":"© 2025 Nova Pool & Spa's · Disseny i manteniment de piscines. Tots els drets reservats."
+},
+en:{
+"brand.sub":"Pools & Spas",
+"nav.home":"Home","nav.services":"Services","nav.zone":"Service area","nav.about":"About us","nav.contact":"Contact","nav.cta":"Free quote",
+"hero.eyebrow":"Baix Empordà · Costa Brava · Design & build",
+"hero.sub":"Design, construction, repair and maintenance of pools and spas across the Baix Empordà and Costa Brava. From a small family business to a benchmark in the sector.",
+"hero.cta1":"Request a quote","hero.scroll":"Discover",
+"hero.chip1":"Bespoke pools","hero.chip2":"Baix Empordà · Costa Brava","hero.chip3":"Multilingual service",
+"svc.eyebrow":"Services","svc.title":"Everything your pool needs",
+"svc.intro":"Design and construction, repair, maintenance and much more. A complete approach for every kind of client, always adapting to what you need.","svc.more":"Learn more",
+"svc.1.t":"Pool construction","svc.1.d":"We design and build unique, bespoke pools: natural, ecological, infinity, overflow and waterfall pools. We advise you to get your project right.",
+"svc.2.t":"Pool repair","svc.2.d":"Our technical team repairs all kinds of faults in pools and water installations, for homes, communities, hotels, campsites and spas.",
+"svc.3.t":"Pool maintenance","svc.3.d":"Control of filtration and disinfection with a digital photometer, non-aggressive products suitable for all skin types, automatic dosing and weekly inspection.",
+"svc.4.t":"Spas & jacuzzis","svc.4.d":"Spa and jacuzzi maintenance: hot-water control, air/water systems, probe calibration, cleaning with special equipment and weekly inspection.",
+"svc.5.t":"Pipe repair","svc.5.d":"Pipe rehabilitation with epoxy resin via the SprayPoxi system, with no building work: we line the inside of the pipe to protect it from corrosion for years.",
+"svc.6.t":"Leak detection gas","svc.6.d":"Leak detection with tracer gas across circuits and structure. We pinpoint the exact leak so it can be repaired without unnecessary building work.",
+"why.eyebrow":"Why Nova Pool","why.title":"Professional and trustworthy",
+"why.1.t":"A company you can trust","why.1.d":"From a small family business to a benchmark in the pool sector.",
+"why.2.t":"A complete approach","why.2.d":"Advice and support on every project, from start to finish.",
+"why.3.t":"Multilingual service","why.3.d":"We serve you in several languages, with no barriers and a personal touch.",
+"why.4.t":"No-obligation quote","why.4.d":"Free advice and a quote, with no commitment at all.",
+"stat.1":"Projects completed","stat.2":"Years of experience","stat.3":"Specialised services","stat.4":"Bespoke pool types",
+"about.eyebrow":"About us","about.title":"From family business to sector benchmark",
+"about.p":"Nova Pool began as a small family business in Palafrugell, with a shop in Mont-Ras. With a revolutionary concept and a complete approach, we've become a benchmark for pools across the Baix Empordà and Costa Brava.",
+"about.f1":"Complete approach and advice","about.f2":"Our own technical team","about.f3":"Multilingual customer service","about.cta":"Get to know us","about.badge.l":"specialised services",
+"zone.eyebrow":"Service area","zone.title":"Baix Empordà & Costa Brava",
+"zone.p":"We work across the whole Baix Empordà and Costa Brava from our base in Mont-Ras. And we keep growing — we've begun expanding nationwide.",
+"zone.f1":"Baix Empordà","zone.f2":"Costa Brava & surroundings","zone.f3":"Nationwide expansion","zone.cta":"See coverage area","zone.badge.l":"infinity & overflow pools",
+"tst.eyebrow":"Reviews","tst.title":"What our clients say",
+"cta.title":"Shall we talk about your pool?","cta.p":"Tell us about your project and we'll prepare a no-obligation quote. We're just one message away.","cta.b1":"Request a quote",
+"sp.title":"Pool and spa services, from start to finish","sp.sub":"Design and construction, repair, maintenance, spas, pipe repair and leak detection. A complete service, with advice at every step.",
+"sp.1.t":"Pool construction","sp.1.d":"We design and build different types of pools, each one unique and exclusive, adapting to every client's wishes and advising to achieve the result they're after. The most requested: natural, ecological, overflow, infinity and waterfall pools. Not sure which pool fits your space? We'll advise you with no obligation.",
+"sp.1.a":"Natural & ecological","sp.1.b":"Overflow & infinity","sp.1.c":"With waterfall","sp.1.e":"Bespoke design",
+"sp.2.t":"Pool repair","sp.2.d":"The experience of our technical service department brings complete reliability when repairing all kinds of faults in pools and water installations. We work for homeowners with pools, residents' associations, sports centres, spas and health resorts, hotels, campsites and many more.",
+"sp.2.a":"All kinds of faults","sp.2.b":"Homes & communities","sp.2.c":"Hotels & campsites","sp.2.e":"Spas & resorts",
+"sp.3.t":"Pool maintenance","sp.3.d":"We control filtration and disinfection equipment with analyses using an accredited digital photometer, apply non-aggressive chemicals suitable for all skin types and install automatic dosing systems for automated water control. Weekly inspection of the hydraulic systems with immediate notice in case of fault or leak.",
+"sp.3.a":"Digital photometer","sp.3.b":"Non-aggressive products","sp.3.c":"Automatic dosing","sp.3.e":"Weekly inspection",
+"sp.4.t":"Spas & jacuzzis","sp.4.d":"Control of hot-water parameters and maintenance of the air/water systems of spas and jacuzzis. We calibrate special measuring probes, clean with specific equipment and dose suitable disinfectants for hot water. Weekly inspection of the hydraulic systems with immediate notice of any issue.",
+"sp.4.a":"Hot water","sp.4.b":"Air/water systems","sp.4.c":"Probe calibration","sp.4.e":"Special equipment",
+"sp.5.t":"Pipe repair","sp.5.d":"We rehabilitate pipes with epoxy resin applied via the SprayPoxi system, extending the pipe's life for years. The material resists pressure, detergents, chemicals and grease, and protects against corrosion and wear. We line the interior with no building work, accessing through an inspection point or downpipe, for a smooth finish and optimal flow.",
+"sp.5.a":"Epoxy resin","sp.5.b":"SprayPoxi system","sp.5.c":"No building work","sp.5.e":"Lasting protection",
+"sp.6.t":"Leak detection gas","sp.6.d":"We locate leaks with tracer gas, checking the supply, bottom-cleaner, floor and skimmer circuits, plus the structure: floor, walls and fittings. We test on site to find the exact leak and repair it without building work in the areas where the lines are in good condition.",
+"sp.6.a":"Tracer gas","sp.6.b":"Exact location","sp.6.c":"No needless work","sp.6.e":"Circuit & structure",
+"proc.eyebrow":"How we work","proc.title":"Simple, from start to finish",
+"proc.1.t":"Get in touch","proc.1.d":"Tell us about your project or fault by phone, WhatsApp or the form.",
+"proc.2.t":"Advice & visit","proc.2.d":"We advise you and, if needed, visit the site to define your project.",
+"proc.3.t":"No-obligation quote","proc.3.d":"You get a clear, free quote with no commitment at all.",
+"proc.4.t":"Let's get to work","proc.4.d":"We carry out the work and stay with you afterwards, with maintenance.",
+"zp.title":"Baix Empordà, Costa Brava and beyond","zp.sub":"Based in Mont-Ras (Girona), we serve the whole Baix Empordà and Costa Brava. We've also begun expanding nationwide. If you don't see your town, write to us.",
+"zp.g.t":"Baix Empordà","zp.g.s":"Our region · Girona","zp.b.t":"Costa Brava","zp.b.s":"and surroundings",
+"zp.note":"Is your project outside this area?","zp.note.link":"Ask us — we're growing →","zp.cta.t":"Dreaming of a new pool?",
+"np.title":"From family business to sector benchmark","np.sub":"We started as a small family business and today we're a benchmark for pools across the Baix Empordà and Costa Brava, without ever losing our personal touch.",
+"np.p1":"<strong>Nova Pool was born in Palafrugell</strong>, with a shop in Mont-Ras, from where it began its expansion with a revolutionary concept in the pool sector.",
+"np.p2":"We've gone from being a small family business to becoming a benchmark, designing and building unique, exclusive pools: natural, ecological, overflow, infinity and waterfall pools.",
+"np.p3":"On every project we apply a complete approach and full advice, adapting to each client's needs: homeowners, residents' associations, hotels, campsites, sports centres and health resorts.",
+"np.p4":"Our customer service is multilingual and supports you at all times. Ask us for advice and a no-obligation quote — let's make the pool you imagine a reality.",
+"np.badge.l":"bespoke pool types",
+"np.v1.t":"Professionalism","np.v1.d":"A technical team with experience and complete reliability.",
+"np.v2.t":"Commitment","np.v2.d":"We meet our goals and respond when we're needed.",
+"np.v3.t":"Quality","np.v3.d":"Quality materials and finishes on every project.",
+"np.v4.t":"Fair price","np.v4.d":"We only recommend what you need, at a fair price.",
+"np.stats.eyebrow":"By the numbers","np.stats.title":"Our work in figures",
+"cp.title":"Let's talk about your pool","cp.sub":"Ask us for advice and a no-obligation quote. We serve you in several languages.",
+"cp.phone":"Phone","cp.email":"Email","cp.address":"Address","cp.comercial":"Sales",
+"cp.form.title":"Request your quote","cp.form.sub":"Fill in the form and we'll get back to you as soon as possible. Multilingual service.",
+"cp.f.name":"Name","cp.f.name.ph":"Your name","cp.f.phone":"Phone","cp.f.phone.ph":"Your phone","cp.f.email":"Email","cp.f.email.ph":"you@email.com","cp.f.msg":"What do you need?","cp.f.msg.ph":"Tell us about your project or pool and which service you're interested in…","cp.f.send":"Send request","cp.f.ok":"Thanks! We're opening your email to send the request.","cp.f.note":"On sending, your email app will open with the message ready. You can also call us or message us on WhatsApp.",
+"cp.map":"View on Google Maps",
+"foot.about":"Design, construction, repair and maintenance of pools and spas across the Baix Empordà and Costa Brava. From a family business to a sector benchmark.",
+"foot.nav":"Navigation","foot.services":"Services","foot.contact":"Contact",
+"foot.rights":"© 2025 Nova Pool & Spa's · Pool design and maintenance. All rights reserved."
+}
+};
+/* Real Google reviews (condensed). You can expand or add more from your Google profile. */
+const TST=[
+ {n:"Laura Sanjurjo Pacín",loc:"Reseña de Google",av:"L",t:{es:"Una empresa muy recomendable: construcción, mantenimiento y trato, todo excelente. Me asesoran muy bien y nunca me hacen gastar de más.",ca:"Una empresa molt recomanable: construcció, manteniment i tracte, tot excel·lent. M'assessoren molt bé i mai em fan gastar de més.",en:"A highly recommendable company: construction, maintenance and service, all excellent. They advise me well and never make me overspend."}},
+ {n:"Marc Urpina",loc:"Reseña de Google",av:"M",t:{es:"Recuperaron una piscina que estaba fatal, con agua de pozo llena de hierro y fosfatos. Vinieron varias veces en una semana y la dejaron cristalina. Gran trabajo.",ca:"Van recuperar una piscina que estava fatal, amb aigua de pou plena de ferro i fosfats. Van venir diverses vegades en una setmana i la van deixar cristal·lina. Gran feina.",en:"They rescued a pool in a terrible state, with well water full of iron and phosphates. They came several times in one week and left it crystal-clear. Great work."}},
+ {n:"Gines Alarcon",loc:"Reseña de Google",av:"G",t:{es:"Tras años con otro proveedor caro y poco satisfactorio, mi experiencia con Nova Pool ha sido lo contrario: profesionalidad, compromiso, calidad y un precio justo.",ca:"Després d'anys amb un altre proveïdor car i poc satisfactori, la meva experiència amb Nova Pool ha estat el contrari: professionalitat, compromís, qualitat i un preu just.",en:"After years with another expensive, unsatisfactory supplier, my experience with Nova Pool has been the opposite: professionalism, commitment, quality and a fair price."}}
+];
+const SERVICE_WORDS=["Construcción","Reparación","Mantenimiento","Spa's & Jacuzzis","Reparación de tubos","Detección de fugas","Piscinas naturales","Desbordantes","Infinitas","Con cascada","Baix Empordà","Costa Brava"];
+document.addEventListener("DOMContentLoaded",function(){
+  const RM=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const $=function(s,c){return (c||document).querySelector(s)};
+  const $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* ---------- i18n: snapshot Spanish baseline from the DOM ---------- */
+  const ES={},ES_HTML={},ES_PH={};
+  $$("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");if(!(k in ES))ES[k]=el.textContent;});
+  $$("[data-i18n-html]").forEach(function(el){var k=el.getAttribute("data-i18n-html");if(!(k in ES_HTML))ES_HTML[k]=el.innerHTML;});
+  $$("[data-ph]").forEach(function(el){var k=el.getAttribute("data-ph");if(!(k in ES_PH))ES_PH[k]=el.getAttribute("placeholder")||"";});
+
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  function heroHTML(lang){
+    var tpl=HERO_TITLES[lang]||HERO_TITLES.es;
+    var parts=tpl.split("|");
+    var out="",wi=0;
+    for(var i=0;i<parts.length;i++){
+      if(i%2===1){out+='<span class="word hl" style="animation-delay:'+(wi*0.08).toFixed(2)+'s">'+esc(parts[i])+'<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M4 8 C 80 2, 220 2, 296 6"/></svg></span> ';wi++;}
+      else{out+=esc(parts[i]).replace(/(\S+)(\s*)/g,function(m,w,sp){var d=(wi*0.08).toFixed(2);wi++;return '<span class="word" style="animation-delay:'+d+'s">'+w+'</span>'+sp;});}
+    }
+    return out;
+  }
+  function store(lang){try{localStorage.setItem("novapool_lang",lang);}catch(e){}}
+  function load(){try{return localStorage.getItem("novapool_lang");}catch(e){return null;}}
+
+  function setLang(lang){
+    if(!HERO_TITLES[lang])lang="es";
+    var d=DICT[lang]||{};
+    $$("[data-i18n]").forEach(function(el){var k=el.getAttribute("data-i18n");var v=(lang==="es")?ES[k]:(d[k]!=null?d[k]:ES[k]);if(v!=null)el.textContent=v;});
+    $$("[data-i18n-html]").forEach(function(el){var k=el.getAttribute("data-i18n-html");var v=(lang==="es")?ES_HTML[k]:(d[k]!=null?d[k]:ES_HTML[k]);if(v!=null)el.innerHTML=v;});
+    $$("[data-ph]").forEach(function(el){var k=el.getAttribute("data-ph");var v=(lang==="es")?ES_PH[k]:(d[k]!=null?d[k]:ES_PH[k]);if(v!=null)el.setAttribute("placeholder",v);});
+    var ht=$("[data-hero-title]");if(ht)ht.innerHTML=heroHTML(lang);
+    document.documentElement.setAttribute("lang",lang);
+    $$("[data-lang]").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-lang")===lang);});
+    CUR_LANG=lang;store(lang);
+    buildTestimonials();
+  }
+  var CUR_LANG="es";
+
+  $$("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"));});});
+
+  /* ---------- Testimonials carousel ---------- */
+  var tTrack=$("#tstTrack"),tDots=$("#tstDots"),tIdx=0,tTimer=null;
+  function buildTestimonials(){
+    if(!tTrack)return;
+    tTrack.innerHTML="";tDots.innerHTML="";
+    TST.forEach(function(item,i){
+      var txt=item.t[CUR_LANG]||item.t.es;
+      var slide=document.createElement("div");slide.className="tst-slide";
+      slide.innerHTML='<div class="tst-card"><div class="tst-stars">'+
+        [0,0,0,0,0].map(function(){return '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.6-5.1 4.5 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 8.9l6.8-.6z"/></svg>';}).join("")+
+        '</div><p class="tst-text">“'+txt+'”</p><div class="tst-who"><div class="tst-av">'+item.av+'</div><div><div class="nm">'+item.n+'</div><div class="loc">'+item.loc+'</div></div></div></div>';
+      tTrack.appendChild(slide);
+      var dot=document.createElement("button");dot.className="tst-dot"+(i===0?" on":"");dot.setAttribute("aria-label","Opinión "+(i+1));
+      dot.addEventListener("click",function(){tGo(i);});
+      tDots.appendChild(dot);
+    });
+    tIdx=Math.min(tIdx,TST.length-1);tGo(tIdx,true);
+  }
+  function tGo(i,silent){
+    if(!tTrack)return;tIdx=(i+TST.length)%TST.length;
+    tTrack.style.transform="translateX(-"+(tIdx*100)+"%)";
+    $$(".tst-dot",tDots).forEach(function(d,di){d.classList.toggle("on",di===tIdx);});
+    if(!silent)tReset();
+  }
+  function tReset(){if(tTimer)clearInterval(tTimer);if(!RM)tTimer=setInterval(function(){tGo(tIdx+1);},5500);}
+  if($("#tstNext"))$("#tstNext").addEventListener("click",function(){tGo(tIdx+1);});
+  if($("#tstPrev"))$("#tstPrev").addEventListener("click",function(){tGo(tIdx-1);});
+  var tVp=$(".tst-viewport");
+  if(tVp){tVp.addEventListener("mouseenter",function(){if(tTimer)clearInterval(tTimer);});tVp.addEventListener("mouseleave",tReset);
+    var sx=0;tVp.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;},{passive:true});
+    tVp.addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45)tGo(tIdx+(dx<0?1:-1));});}
+
+  /* ---------- Router ---------- */
+  var ALIAS={"":"home","home":"home","inicio":"home","servicios":"servicios","services":"servicios","zona":"zona","zone":"zona","nosotros":"nosotros","aboutus":"nosotros","about":"nosotros","contacto":"contacto","contact":"contacto"};
+  function curKey(){var h=location.hash.replace(/^#\/?/,"").replace(/\/+$/,"").toLowerCase();return ALIAS[h]||"home";}
+  function showView(key){
+    $$(".view").forEach(function(v){v.classList.toggle("active",v.getAttribute("data-view")===key);});
+    $$(".nav-link").forEach(function(a){var ak=ALIAS[(a.getAttribute("href")||"").replace(/^#\/?/,"").replace(/\/+$/,"").toLowerCase()]||"home";a.classList.toggle("active",ak===key);});
+    var av=$('.view[data-view="'+key+'"]');
+    window.scrollTo(0,0);
+    if(av){revealScope(av);runCounters(av);}
+    closeMenu();
+  }
+  function route(){showView(curKey());}
+  window.addEventListener("hashchange",route);
+  $$('[data-goto]').forEach(function(el){el.addEventListener("click",function(){location.hash="#/"+el.getAttribute("data-goto");});
+    el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();location.hash="#/"+el.getAttribute("data-goto");}});});
+  var sd=$("[data-scrolldown]");if(sd)sd.addEventListener("click",function(e){e.preventDefault();var t=$("#servicios-anchor");if(t)t.scrollIntoView({behavior:RM?"auto":"smooth"});});
+  /* ---------- Scroll reveal ---------- */
+  function revealScope(scope){
+    var vh=window.innerHeight;
+    $$("[data-reveal]",scope).forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<vh*0.9&&r.bottom>0)el.classList.add("in");
+    });
+  }
+  function revealActive(){var av=$(".view.active");if(av){revealScope(av);runCounters(av);}}
+
+  /* ---------- Stat counters ---------- */
+  function runCounters(scope){
+    var vh=window.innerHeight;
+    $$("[data-count]",scope).forEach(function(el){
+      if(el.dataset.done)return;
+      var r=el.getBoundingClientRect();
+      if(r.top>vh*0.92||r.bottom<0)return;
+      el.dataset.done="1";
+      var target=parseInt(el.getAttribute("data-count"),10)||0;
+      var suffix=el.getAttribute("data-suffix")||"";
+      if(RM){el.textContent=target.toLocaleString("es-ES")+suffix;return;}
+      var dur=1500,t0=null;
+      function step(ts){
+        if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);
+        var eased=1-Math.pow(1-p,3);
+        el.textContent=Math.round(target*eased).toLocaleString("es-ES")+suffix;
+        if(p<1)requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ---------- Caustic water filter ---------- */
+  if(!RM){$$(".caustics").forEach(function(c){c.style.filter="url(#causticFilter)";});}
+
+  /* ---------- Hero bubbles + ripples ---------- */
+  var bubbles=$("#bubbles");
+  if(bubbles&&!RM){
+    for(var i=0;i<16;i++){
+      var b=document.createElement("div");b.className="bubble";
+      var size=6+Math.random()*22;
+      b.style.width=size+"px";b.style.height=size+"px";
+      b.style.left=Math.random()*100+"%";
+      b.style.animationDuration=(8+Math.random()*11)+"s";
+      b.style.animationDelay=(-Math.random()*12)+"s";
+      b.style.setProperty("--drift",(Math.random()*80-40)+"px");
+      bubbles.appendChild(b);
+    }
+  }
+  var ripWrap=$("#ripples"),hero=$(".hero"),lastRip=0;
+  function makeRipple(x,y){
+    if(!ripWrap)return;
+    var r=document.createElement("span");r.className="ripple";
+    var s=18+Math.random()*26;
+    r.style.left=x+"px";r.style.top=y+"px";r.style.width=s+"px";r.style.height=s+"px";
+    ripWrap.appendChild(r);
+    setTimeout(function(){r.remove();},1200);
+  }
+  if(hero&&!RM){
+    hero.addEventListener("pointermove",function(e){
+      var now=Date.now();if(now-lastRip<90)return;lastRip=now;
+      var rect=hero.getBoundingClientRect();makeRipple(e.clientX-rect.left,e.clientY-rect.top);
+    });
+    hero.addEventListener("click",function(e){var rect=hero.getBoundingClientRect();for(var k=0;k<3;k++){(function(d){setTimeout(function(){makeRipple(e.clientX-rect.left,e.clientY-rect.top);},d);})(k*90);}});
+  }
+
+  /* ---------- Marquee ---------- */
+  var mq=$("#marquee");
+  if(mq){
+    function fillMq(){var html="";for(var k=0;k<SERVICE_WORDS.length;k++)html+="<span>"+SERVICE_WORDS[k]+"</span>";return html;}
+    mq.innerHTML=fillMq()+fillMq();
+  }
+
+  /* ---------- Nav scroll / progress / back-to-top ---------- */
+  var nav=$("#nav"),toTop=$("#toTop"),progress=$("#progress"),ticking=false;
+  function onScroll(){
+    var y=window.pageYOffset||document.documentElement.scrollTop;
+    if(nav)nav.classList.toggle("scrolled",y>40);
+    if(toTop)toTop.classList.toggle("show",y>520);
+    if(progress){var h=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(h>0?(y/h)*100:0)+"%";}
+    revealActive();
+  }
+  window.addEventListener("scroll",function(){if(!ticking){window.requestAnimationFrame(function(){onScroll();ticking=false;});ticking=true;}},{passive:true});
+  window.addEventListener("resize",revealActive);
+  if(toTop)toTop.addEventListener("click",function(){window.scrollTo({top:0,behavior:RM?"auto":"smooth"});});
+
+  /* ---------- Mobile menu ---------- */
+  var burger=$("#burger");
+  function closeMenu(){document.body.classList.remove("menu-open");if(burger)burger.setAttribute("aria-expanded","false");}
+  if(burger){burger.addEventListener("click",function(){var open=document.body.classList.toggle("menu-open");burger.setAttribute("aria-expanded",open?"true":"false");});}
+  $$(".m-link").forEach(function(a){a.addEventListener("click",closeMenu);});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeMenu();});
+
+  /* ---------- Magnetic buttons + glow ---------- */
+  if(!RM&&window.matchMedia("(hover: hover)").matches){
+    $$("[data-magnetic]").forEach(function(el){
+      el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();var mx=e.clientX-r.left-r.width/2;var my=e.clientY-r.top-r.height/2;el.style.transform="translate("+mx*0.18+"px,"+my*0.28+"px)";});
+      el.addEventListener("mouseleave",function(){el.style.transform="";});
+    });
+    $$(".btn").forEach(function(el){
+      el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();el.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");el.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%");});
+    });
+  }
+
+  /* ---------- Contact form -> mailto ---------- */
+  var form=$("#contactForm"),formMsg=$("#formMsg");
+  if(form){
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var name=$("#f-name").value.trim(),phone=$("#f-phone").value.trim(),email=$("#f-email").value.trim(),msg=$("#f-msg").value.trim();
+      var ok=true;
+      [["#f-name",name!==""],["#f-email",/.+@.+\..+/.test(email)]].forEach(function(p){var f=$(p[0]);if(!p[1]){ok=false;f.style.borderColor="#e0564f";}else{f.style.borderColor="";}});
+      if(!ok)return;
+      var subj="Solicitud de presupuesto - "+name;
+      var body="Nombre: "+name+"\nTeléfono: "+phone+"\nEmail: "+email+"\n\n"+msg;
+      if(formMsg)formMsg.classList.add("show");
+      window.location.href="mailto:info@piscinasnovapool.com?subject="+encodeURIComponent(subj)+"&body="+encodeURIComponent(body);
+    });
+  }
+
+  /* ---------- Init ---------- */
+  var saved=load();
+  setLang(saved&&HERO_TITLES[saved]?saved:"es");
+  route();
+  setTimeout(revealActive,60);
+  tReset();
+});
+</script>
+</body>
+</html>
